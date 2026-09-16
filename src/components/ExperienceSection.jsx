@@ -6,7 +6,7 @@ import { playUiClick, playUiHover } from '../utils/audio';
 import { X, CheckCircle } from 'lucide-react';
 const TIMELINE = [
     {
-        period: 'NOW',
+        period: 'Mar-2026 - Aug-2026',
         role: 'SEO Analyst | Web Developer | Web Maintenance',
         company: 'Media7 News & Entertainments',
         shortDescription: 'Developing and maintaining company websites, contributing to the Media7 News Portal, building Grace Financials, and creating AI-powered SEO workflows.',
