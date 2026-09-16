@@ -1,12 +1,12 @@
-import heroImg from '../assets/images/hero_vice_city_car_1789553223539.jpg';
-import aboutImg from '../assets/images/about_coastal_binil_1789551437401.jpg';
-import skillsImg from '../assets/images/skills_desk_binil_1789551457754.jpg';
-import projectsImg from '../assets/images/projects_bayfront_laptop_1789551479288.jpg';
-import experienceImg from '../assets/images/experience_rooftop_binil_1789551524592.jpg';
-import contactImg from '../assets/images/contact_downtown_binil_1789551503434.jpg';
-import achievementsImg from '../assets/images/achievements_downtown_1789554746385.jpg';
-import completeImg from '../assets/images/complete_sunset_1789554766885.jpg';
-import academyImg from '../assets/images/academy_campus_binil_1789590156493.jpg';
+import heroImg from '../assets/images/hero_vice_city_car_1789553223539.webp';
+import aboutImg from '../assets/images/about_coastal_binil_1789551437401.webp';
+import skillsImg from '../assets/images/skills_desk_binil_1789551457754.webp';
+import projectsImg from '../assets/images/projects_bayfront_laptop_1789551479288.webp';
+import experienceImg from '../assets/images/experience_rooftop_binil_1789551524592.webp';
+import contactImg from '../assets/images/contact_downtown_binil_1789551503434.webp';
+import achievementsImg from '../assets/images/achievements_downtown_1789554746385.webp';
+import completeImg from '../assets/images/complete_sunset_1789554766885.webp';
+import academyImg from '../assets/images/academy_campus_binil_1789590156493.webp';
 export const portfolioImages = {
     hero: heroImg,
     about: aboutImg,
