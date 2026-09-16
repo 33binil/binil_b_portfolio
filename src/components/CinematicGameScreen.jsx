@@ -54,12 +54,17 @@ export const CinematicGameScreen = ({ backgroundImage, superTitle, title, script
     return (<div className="relative w-full h-[100dvh] min-h-[100dvh] overflow-hidden bg-[#07090e] select-none flex flex-col justify-between">
       {/* Fullscreen Cinematic Background Art */}
       <div className="absolute inset-0 z-0">
-        <img src={backgroundImage} alt={title} referrerPolicy="no-referrer" className="w-full h-full object-cover object-[70%_center] md:object-center filter brightness-[0.78] contrast-[1.12]"/>
+        <img
+          src={backgroundImage}
+          alt={title}
+          referrerPolicy="no-referrer"
+          className="w-full h-full object-cover object-[75%_center] sm:object-[70%_center] md:object-center filter brightness-[0.92] contrast-[1.08]"
+        />
 
-        {/* Ambient Dark Gradient Vignette for Left UI Readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#040609]/95 via-[#040609]/65 to-transparent pointer-events-none"/>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#040609]/90 via-transparent to-[#040609]/50 pointer-events-none"/>
-        <div className="absolute inset-0 bg-scanlines opacity-20 pointer-events-none"/>
+        {/* Ambient Dark Gradient: High black on left for content, rapidly tapering to very low/clear on right to view person */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(4,6,9,0.95)_18%,rgba(4,6,9,0.82)_26%,rgba(4,6,9,0.32)_46%,rgba(4,6,9,0.06)_65%,transparent_82%)] pointer-events-none"/>
+        <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,9,0.65)_10%,transparent_22%,transparent_82%,rgba(4,6,9,0.30)_100%)] pointer-events-none"/>
+        <div className="absolute inset-0 bg-scanlines opacity-12 pointer-events-none"/>
       </div>
 
       {/* ========================================================================= */}
@@ -74,7 +79,7 @@ export const CinematicGameScreen = ({ backgroundImage, superTitle, title, script
           <h1 className="font-bebas text-3xl sm:text-5xl md:text-6xl lg:text-[76px] leading-[0.85] tracking-wider text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
             {title}
           </h1>
-          <span className={`font-script text-xl sm:text-3xl md:text-4xl -rotate-6 ml-2 sm:ml-6 -mt-1 sm:-mt-1.5 font-bold tracking-wide drop-shadow-[0_0_15px_currentColor] ${scriptColor}`}>
+          <span className={`font-script text-xl sm:text-3xl md:text-4xl lg:text-5xl -rotate-6 ml-2 sm:ml-6 -mt-1 sm:-mt-2 font-bold tracking-wide drop-shadow-[0_0_15px_currentColor] ${scriptColor}`}>
             {scriptSubtitle}
           </span>
         </div>
@@ -127,7 +132,7 @@ export const CinematicGameScreen = ({ backgroundImage, superTitle, title, script
           </div>
 
           {/* ESC - BACK TO MENU Button - Blinking Lighted Neon Beacon */}
-          <button onClick={handleBackToMenu} onMouseEnter={playUiHover} className="group relative mt-1.5 sm:mt-3 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-md border-2 text-[11px] sm:text-xs md:text-[13px] font-mono-code font-extrabold uppercase tracking-wider transition-all duration-200 cursor-pointer active:scale-95 flex items-center gap-1.5 sm:gap-2 animate-neon-beacon overflow-hidden backdrop-blur-md" title="Press ESC or Click to return to main start menu">
+          <button onClick={handleBackToMenu} onMouseEnter={playUiHover} className="group relative mt-1.5 sm:mt-3 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-md border-2 text-[11px] sm:text-xs font-mono-code font-extrabold uppercase tracking-wider transition-all duration-200 cursor-pointer active:scale-95 flex items-center gap-1.5 sm:gap-2 animate-neon-beacon overflow-hidden backdrop-blur-md" title="Press ESC or Click to return to main start menu">
             {/* Blinking Signal Light LED */}
             <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-90"/>
@@ -159,8 +164,8 @@ export const CinematicGameScreen = ({ backgroundImage, superTitle, title, script
       {/* 3D IN-SCENE LOCATION BADGE (CENTER GROUND - Desktop only to not block)   */}
       {/* ========================================================================= */}
       <div className="hidden md:flex absolute left-1/2 bottom-[18%] md:bottom-[21%] -translate-x-1/2 pointer-events-none z-10 flex-col items-center">
-        <div className="px-4 py-1 rounded-sm bg-black/70 border border-cyan-400/50 backdrop-blur-sm shadow-[0_0_20px_rgba(0,240,255,0.3)]">
-          <span className="font-bebas text-lg sm:text-xl md:text-2xl text-white tracking-[0.25em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] whitespace-nowrap">
+        <div className="px-4 py-1.5 md:px-5 md:py-2 rounded-sm bg-black/70 border border-cyan-400/50 backdrop-blur-sm shadow-[0_0_20px_rgba(0,240,255,0.3)]">
+          <span className="font-bebas text-lg sm:text-xl text-white tracking-[0.25em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] whitespace-nowrap">
             {locationName}
           </span>
         </div>
@@ -181,9 +186,9 @@ export const CinematicGameScreen = ({ backgroundImage, superTitle, title, script
       {/* ========================================================================= */}
       <div className="relative z-20 w-full px-3.5 sm:px-8 md:px-12 pb-3 sm:pb-6 flex items-end justify-between gap-3 pointer-events-none flex-shrink-0">
         {/* Bottom Left: Tactical Radar & Current Objective */}
-        <div className="pointer-events-auto flex items-center gap-2.5 sm:gap-3.5 min-w-0">
+        <div className="pointer-events-auto flex items-center gap-2.5 sm:gap-3.5 md:gap-4 min-w-0">
           {/* Radar Box */}
-          <div className="relative w-11 h-11 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-md bg-black/80 border border-cyan-500/40 p-0.5 sm:p-1 flex items-center justify-center overflow-hidden shadow-[0_0_20px_rgba(0,240,255,0.2)] flex-shrink-0">
+          <div className="relative w-11 h-11 sm:w-16 sm:h-16 rounded-md bg-black/80 border border-cyan-500/40 p-0.5 sm:p-1 flex items-center justify-center overflow-hidden shadow-[0_0_20px_rgba(0,240,255,0.2)] flex-shrink-0">
             {/* Radar Grid Texture */}
             <div className="absolute inset-0 bg-radar-grid opacity-50"/>
             <div className="absolute w-8 h-8 sm:w-12 sm:h-12 rounded-full border border-cyan-500/30"/>
@@ -204,7 +209,7 @@ export const CinematicGameScreen = ({ backgroundImage, superTitle, title, script
               <span className="w-1.5 h-1.5 rounded-full bg-[#ff2a85] animate-pulse"/>
               <span>CURRENT OBJECTIVE</span>
             </div>
-            <div className="font-bebas text-sm sm:text-xl md:text-2xl text-white tracking-wide leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] truncate sm:whitespace-normal">
+            <div className="font-bebas text-sm sm:text-xl text-white tracking-wide leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] truncate sm:whitespace-normal">
               {objectiveText}
             </div>
             <div className="hidden sm:block text-[10px] text-slate-400 tracking-wide font-sans">
@@ -220,7 +225,7 @@ export const CinematicGameScreen = ({ backgroundImage, superTitle, title, script
 
         {/* Bottom Right: Cursive Signature Quote (Desktop & Tablet) */}
         <div className="hidden sm:block pointer-events-auto text-right font-mono-code">
-          <div className="font-script text-base sm:text-xl md:text-[24px] text-slate-200 tracking-wide italic leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+          <div className="font-script text-base sm:text-xl text-slate-200 tracking-wide italic leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
             "Code is my weapon, Creativity is my world."
           </div>
           <div className="font-script text-base sm:text-xl text-[#ff2a85] tracking-wider mt-0.5 drop-shadow-[0_0_10px_rgba(255,42,133,0.8)]">

@@ -29,25 +29,20 @@ const OBJECTIVES_MAP = {
         subtitle: 'FOLLOW INDUSTRY MILESTONES',
         tag: 'MISSION 05 // TIMELINE',
     },
-    achievements: {
-        title: 'COLLECT UNLOCKED TROPHIES',
-        subtitle: 'VERIFIED REAL-WORLD ACHIEVEMENTS',
-        tag: 'MISSION 06 // HONORS',
-    },
     education: {
         title: 'EXAMINE CREDENTIALS & DEGREES',
         subtitle: 'ACADEMIC FOUNDATION & TRAINING',
-        tag: 'MISSION 07 // ACADEMY',
+        tag: 'MISSION 06 // ACADEMY',
     },
     services: {
         title: 'EVALUATE CAPABILITIES & SERVICES',
         subtitle: 'CUSTOM DIGITAL BUILDS ON DEMAND',
-        tag: 'MISSION 08 // CONTRACTS',
+        tag: 'MISSION 07 // CONTRACTS',
     },
     contact: {
         title: 'OPEN A SECURE LINE OF CONTACT',
         subtitle: 'START YOUR NEXT DIGITAL VENTURE',
-        tag: 'MISSION 09 // COMM LINK',
+        tag: 'MISSION 08 // COMM LINK',
     },
 };
 export const HudOverlay = ({ currentSection }) => {

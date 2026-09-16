@@ -8,10 +8,9 @@ const NAV_ITEMS = [
     { path: '/skills', label: 'SKILLS', mission: 'MISSION 03' },
     { path: '/projects', label: 'PROJECTS', mission: 'MISSION 04' },
     { path: '/experience', label: 'EXPERIENCE', mission: 'MISSION 05' },
-    { path: '/achievements', label: 'ACHIEVEMENTS', mission: 'MISSION 06' },
-    { path: '/education', label: 'ACADEMY', mission: 'MISSION 07' },
-    { path: '/services', label: 'SERVICES', mission: 'MISSION 08' },
-    { path: '/contact', label: 'CONTACT', mission: 'MISSION 09' },
+    { path: '/education', label: 'ACADEMY', mission: 'MISSION 06' },
+    { path: '/services', label: 'SERVICES', mission: 'MISSION 07' },
+    { path: '/contact', label: 'CONTACT', mission: 'MISSION 08' },
 ];
 export const Navbar = () => {
     const navigate = useNavigate();

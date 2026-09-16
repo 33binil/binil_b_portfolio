@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp, Linkedin, Instagram, Github, MessageCircle, Mail } from 'lucide-react';
 import { playUiClick, playUiHover } from '../utils/audio';
+
 export const Footer = () => {
     const navigate = useNavigate();
     const handleNavigate = (path) => {
@@ -62,6 +63,68 @@ export const Footer = () => {
             <span>TOP OF PAGE</span>
             <ArrowUp className="w-3.5 h-3.5 text-cyan-400 group-hover:-translate-y-1 transition-transform"/>
           </button>
+        </div>
+
+        {/* Social / Direct Connect Bar */}
+        <div className="py-4 border-b border-white/10 flex flex-wrap items-center justify-center sm:justify-between gap-3 font-mono-code text-xs">
+          <span className="text-[11px] text-slate-400 uppercase tracking-wider">
+            COMM CHANNELS // DIRECT DISPATCH
+          </span>
+          <div className="flex flex-wrap items-center gap-2">
+            <a
+              href="https://linkedin.com/in/33binilb"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={playUiClick}
+              className="p-2 rounded bg-white/5 hover:bg-[#0A66C2]/20 border border-white/10 hover:border-[#0A66C2] text-slate-300 hover:text-sky-300 transition-colors flex items-center gap-1.5"
+              title="Let's Connect on LinkedIn"
+            >
+              <Linkedin className="w-3.5 h-3.5 text-[#0A66C2]" />
+              <span className="text-[11px] font-bold">LinkedIn</span>
+            </a>
+            <a
+              href="https://instagram.com/binil_.b"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={playUiClick}
+              className="p-2 rounded bg-white/5 hover:bg-[#E4405F]/20 border border-white/10 hover:border-[#E4405F] text-slate-300 hover:text-pink-400 transition-colors flex items-center gap-1.5"
+              title="Instagram @binil_.b"
+            >
+              <Instagram className="w-3.5 h-3.5 text-[#E4405F]" />
+              <span className="text-[11px] font-bold">Instagram</span>
+            </a>
+            <a
+              href="https://github.com/33binil"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={playUiClick}
+              className="p-2 rounded bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white text-slate-300 hover:text-white transition-colors flex items-center gap-1.5"
+              title="Github @33binilb"
+            >
+              <Github className="w-3.5 h-3.5" />
+              <span className="text-[11px] font-bold">GitHub</span>
+            </a>
+            <a
+              href="https://wa.me/917902931503"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={playUiClick}
+              className="p-2 rounded bg-white/5 hover:bg-[#25D366]/20 border border-white/10 hover:border-[#25D366] text-slate-300 hover:text-[#25D366] transition-colors flex items-center gap-1.5"
+              title="Chat on WhatsApp"
+            >
+              <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
+              <span className="text-[11px] font-bold">WhatsApp</span>
+            </a>
+            <a
+              href="mailto:33binilb@gmail.com"
+              onClick={playUiClick}
+              className="p-2 rounded bg-white/5 hover:bg-[#D44638]/20 border border-white/10 hover:border-[#D44638] text-slate-300 hover:text-[#ff786e] transition-colors flex items-center gap-1.5"
+              title="Send an email"
+            >
+              <Mail className="w-3.5 h-3.5 text-[#D44638]" />
+              <span className="text-[11px] font-bold">Gmail</span>
+            </a>
+          </div>
         </div>
 
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] font-mono-code text-slate-400">

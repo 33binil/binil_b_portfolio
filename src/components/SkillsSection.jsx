@@ -10,7 +10,6 @@ const PRIMARY_SKILLS = [
     { name: 'ASTRO / GSAP', percent: 88, category: 'Animation' },
     { name: 'PYTHON', percent: 75, category: 'Backend' },
     { name: 'UI / UX', percent: 90, category: 'Design' },
-    { name: 'BLENDER', percent: 70, category: '3D' },
     { name: 'AI / AUTOMATION', percent: 85, category: 'AI' },
 ];
 const EXTENDED_ARSENAL = [
@@ -30,7 +29,7 @@ export const SkillsSection = () => {
               <div className="flex items-center justify-between border-b border-white/10 pb-3 font-mono-code">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping"/>
-                  <span className="text-[11px] sm:text-xs font-bold text-cyan-400 tracking-widest uppercase">
+                  <span className="text-[11px] sm:text-xs md:text-sm font-bold text-cyan-400 tracking-widest uppercase">
                     DEVELOPMENT ARSENAL // EXPANDED
                   </span>
                 </div>
@@ -65,7 +64,7 @@ export const SkillsSection = () => {
             </div>
           </div>) : null}>
       {/* Left Docked Skill Bars as in Reference Image 2 */}
-      <div className="space-y-2.5 sm:space-y-3 max-w-sm">
+      <div className="space-y-2.5 sm:space-y-3 max-w-sm sm:max-w-md">
         {PRIMARY_SKILLS.map((skill, idx) => {
             const isSelected = selectedSkill === skill.name;
             return (<div key={idx} onClick={() => {

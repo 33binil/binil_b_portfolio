@@ -9,7 +9,6 @@ export const GAME_MENU_ITEMS = [
     { id: 'skills', label: 'SKILLS', path: '/skills' },
     { id: 'projects', label: 'PROJECTS', path: '/projects' },
     { id: 'experience', label: 'EXPERIENCE', path: '/experience' },
-    { id: 'achievements', label: 'ACHIEVEMENTS', path: '/achievements' },
     { id: 'academy', label: 'ACADEMY', path: '/education' },
     { id: 'services', label: 'SERVICES', path: '/services' },
     { id: 'contact', label: 'CONTACT', path: '/contact' },
@@ -120,12 +119,17 @@ export const GameScreenLayout = ({ activeMenuId, scriptSubtitle, missionCode, mi
     return (<div className="relative w-full min-h-screen lg:h-screen lg:max-h-screen lg:overflow-hidden bg-[#07090e] select-none flex flex-col justify-between">
       {/* Fullscreen Cinematic Background Art with Ambient Vignette */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <img src={currentBg} alt="Cinematic Vice City Background" referrerPolicy="no-referrer" className="w-full h-full object-cover object-[70%_center] md:object-center filter brightness-[0.42] contrast-[1.15]"/>
+        <img
+          src={currentBg}
+          alt="Cinematic Vice City Background"
+          referrerPolicy="no-referrer"
+          className="w-full h-full object-cover object-[75%_center] sm:object-[70%_center] md:object-center filter brightness-[0.92] contrast-[1.08]"
+        />
 
-        {/* Ambient Dark Gradient Vignette for UI Readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#040609]/98 via-[#040609]/85 to-[#040609]/75"/>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#040609]/95 via-transparent to-[#040609]/70"/>
-        <div className="absolute inset-0 bg-scanlines opacity-20"/>
+        {/* Ambient Dark Gradient: High black on left for content, rapidly tapering to very low/clear on right to view person */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(4,6,9,0.95)_18%,rgba(4,6,9,0.82)_26%,rgba(4,6,9,0.32)_46%,rgba(4,6,9,0.06)_65%,transparent_82%)]"/>
+        <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,9,0.65)_10%,transparent_22%,transparent_82%,rgba(4,6,9,0.30)_100%)]"/>
+        <div className="absolute inset-0 bg-scanlines opacity-12"/>
       </div>
 
       {/* ========================================================================= */}

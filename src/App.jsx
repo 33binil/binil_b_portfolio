@@ -6,7 +6,6 @@ import { AboutSection } from './components/AboutSection';
 import { SkillsSection } from './components/SkillsSection';
 import { ProjectsSection } from './components/ProjectsSection';
 import { ExperienceSection } from './components/ExperienceSection';
-import { AchievementsSection } from './components/AchievementsSection';
 import { EducationSection } from './components/EducationSection';
 import { ServicesSection } from './components/ServicesSection';
 import { ContactSection } from './components/ContactSection';
@@ -20,7 +19,6 @@ function AppContent() {
           <Route path="/skills" element={<SkillsSection />}/>
           <Route path="/projects" element={<ProjectsSection />}/>
           <Route path="/experience" element={<ExperienceSection />}/>
-          <Route path="/achievements" element={<AchievementsSection />}/>
           <Route path="/education" element={<EducationSection />}/>
           <Route path="/services" element={<ServicesSection />}/>
           <Route path="/contact" element={<ContactSection />}/>

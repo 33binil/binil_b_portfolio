@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { User, Cpu, FolderGit2, Briefcase, Trophy, GraduationCap, Sparkles, Mail, ArrowRight, Radio, } from 'lucide-react';
+import { User, Cpu, FolderGit2, Briefcase, GraduationCap, Sparkles, Mail, ArrowRight, Radio, } from 'lucide-react';
 import { SECTORS } from '../data/sectorsData';
 import { playUiClick, playUiHover } from '../utils/audio';
 export const MissionHubGrid = () => {
@@ -15,8 +15,6 @@ export const MissionHubGrid = () => {
                 return <FolderGit2 className="w-5 h-5 text-purple-400"/>;
             case 'experience':
                 return <Briefcase className="w-5 h-5 text-amber-400"/>;
-            case 'achievements':
-                return <Trophy className="w-5 h-5 text-emerald-400"/>;
             case 'education':
                 return <GraduationCap className="w-5 h-5 text-cyan-400"/>;
             case 'services':
@@ -78,7 +76,7 @@ export const MissionHubGrid = () => {
 
         <div className="text-right hidden sm:block font-mono-code text-xs text-slate-400">
           <div className="text-emerald-400 font-semibold">ALL SECTORS ONLINE</div>
-          <div>8 UNLOCKED MISSIONS</div>
+          <div>7 UNLOCKED MISSIONS</div>
         </div>
       </div>
 

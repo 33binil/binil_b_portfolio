@@ -51,7 +51,7 @@ export const ServicesSection = () => {
                 <h3 className="font-bebas text-xl sm:text-2xl text-white tracking-wide">
                   {selectedService.title}
                 </h3>
-                <p className="text-xs text-slate-300 font-light mt-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 font-light mt-2 leading-relaxed">
                   {selectedService.scope}
                 </p>
               </div>
@@ -70,7 +70,7 @@ export const ServicesSection = () => {
             </div>
           </div>) : null}>
       {/* Left Docked Cards */}
-      <div className="space-y-2.5 max-w-sm">
+      <div className="space-y-2.5 max-w-sm sm:max-w-md">
         {SERVICE_CAPABILITIES.map((item, idx) => (<div key={idx} onClick={() => {
                 playUiClick();
                 setSelectedService(item);

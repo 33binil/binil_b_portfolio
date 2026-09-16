@@ -9,7 +9,6 @@ const MENU_ITEMS = [
     { id: 'skills', label: 'SKILLS', path: '/skills' },
     { id: 'projects', label: 'PROJECTS', path: '/projects' },
     { id: 'experience', label: 'EXPERIENCE', path: '/experience' },
-    { id: 'achievements', label: 'ACHIEVEMENTS', path: '/achievements' },
     { id: 'academy', label: 'ACADEMY', path: '/education' },
     { id: 'services', label: 'SERVICES', path: '/services' },
     { id: 'contact', label: 'CONTACT', path: '/contact' },
@@ -99,12 +98,17 @@ export const HeroSection = () => {
     return (<div className="relative w-full h-[100dvh] min-h-[100dvh] overflow-hidden bg-[#07090e] select-none flex flex-col justify-between">
       {/* Fullscreen Cinematic Background Art (Character + Sports Car + Vice City Sunset) */}
       <div className="absolute inset-0 z-0">
-        <img src={portfolioImages.hero} alt="Binil B - Vice City Supercar Scene" referrerPolicy="no-referrer" className="w-full h-full object-cover object-[70%_center] md:object-center filter brightness-[0.78] contrast-[1.12]"/>
+        <img
+          src={portfolioImages.hero}
+          alt="Binil B - Vice City Supercar Scene"
+          referrerPolicy="no-referrer"
+          className="w-full h-full object-cover object-[75%_center] sm:object-[70%_center] md:object-center filter brightness-[0.92] contrast-[1.08]"
+        />
 
-        {/* Ambient Dark Gradient Vignette for Left UI Readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#040609]/95 via-[#040609]/65 to-transparent pointer-events-none"/>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#040609]/90 via-transparent to-[#040609]/50 pointer-events-none"/>
-        <div className="absolute inset-0 bg-scanlines opacity-20 pointer-events-none"/>
+        {/* Ambient Dark Gradient: High black on left for content, rapidly tapering to very low/clear on right to view person */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(4,6,9,0.95)_18%,rgba(4,6,9,0.82)_26%,rgba(4,6,9,0.32)_46%,rgba(4,6,9,0.06)_65%,transparent_82%)] pointer-events-none"/>
+        <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,9,0.65)_10%,transparent_22%,transparent_82%,rgba(4,6,9,0.30)_100%)] pointer-events-none"/>
+        <div className="absolute inset-0 bg-scanlines opacity-12 pointer-events-none"/>
       </div>
 
       {/* ========================================================================= */}
@@ -113,13 +117,13 @@ export const HeroSection = () => {
       <div className="relative z-20 w-full px-3.5 sm:px-8 md:px-12 pt-3 sm:pt-6 flex items-start justify-between pointer-events-none flex-shrink-0">
         {/* Top Left: Logo / Branding ("BINIL BUILDS Portfolio") */}
         <div className="pointer-events-auto flex flex-col items-start -mt-0.5 sm:mt-0">
-          <h1 className="font-bebas text-3xl sm:text-5xl md:text-7xl lg:text-[76px] leading-[0.85] tracking-wider text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
+          <h1 className="font-bebas text-3xl sm:text-5xl md:text-6xl lg:text-[76px] leading-[0.85] tracking-wider text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
             BINIL
           </h1>
-          <h2 className="font-bebas text-3xl sm:text-5xl md:text-7xl lg:text-[76px] leading-[0.85] tracking-wider text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
+          <h2 className="font-bebas text-3xl sm:text-5xl md:text-6xl lg:text-[76px] leading-[0.85] tracking-wider text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
             BUILDS
           </h2>
-          <span className="font-script text-xl sm:text-3xl md:text-4xl text-[#ff2a85] -rotate-6 ml-2 sm:ml-6 -mt-1 sm:-mt-1.5 drop-shadow-[0_0_15px_rgba(255,42,133,0.9)] font-bold tracking-wide">
+          <span className="font-script text-xl sm:text-3xl md:text-4xl lg:text-5xl text-[#ff2a85] -rotate-6 ml-2 sm:ml-6 -mt-1 sm:-mt-2 drop-shadow-[0_0_15px_rgba(255,42,133,0.9)] font-bold tracking-wide">
             Portfolio
           </span>
         </div>
@@ -189,7 +193,7 @@ export const HeroSection = () => {
                     ? 'bg-gradient-to-r from-[#ff1f7d] via-[#ff2a85] to-[#f41459] text-white shadow-[0_0_25px_rgba(255,42,133,0.6)] translate-x-1 sm:translate-x-2 font-bold'
                     : 'text-slate-200/90 hover:text-white hover:translate-x-1'}`}>
                 <div className="flex items-center gap-1.5 sm:gap-2.5">
-                  <span className={`font-bebas text-lg sm:text-2xl md:text-[28px] tracking-wide leading-none transition-colors ${isSelected ? 'text-white' : 'text-slate-200 group-hover:text-white'}`}>
+                  <span className={`font-bebas text-lg sm:text-2xl tracking-wide leading-none transition-colors ${isSelected ? 'text-white' : 'text-slate-200 group-hover:text-white'}`}>
                     {item.label}
                   </span>
 
@@ -205,7 +209,7 @@ export const HeroSection = () => {
         </nav>
 
         {/* Keyboard hint */}
-        <div className="hidden sm:flex items-center gap-3 pt-3 text-[10px] font-mono-code text-slate-400">
+        <div className="hidden sm:flex items-center gap-3 pt-3 text-[10px] sm:text-xs font-mono-code text-slate-400">
           <span>[W / S] NAVIGATE</span>
           <span>•</span>
           <span>[ENTER] SELECT</span>
@@ -217,9 +221,9 @@ export const HeroSection = () => {
       {/* ========================================================================= */}
       <div className="relative z-20 w-full px-3.5 sm:px-8 md:px-12 pb-3 sm:pb-6 flex items-end justify-between gap-3 pointer-events-none flex-shrink-0">
         {/* Bottom Left: Tactical Radar & Current Objective Widget */}
-        <div className="pointer-events-auto flex items-center gap-2.5 sm:gap-3.5 min-w-0">
+        <div className="pointer-events-auto flex items-center gap-2.5 sm:gap-3.5 md:gap-4 min-w-0">
           {/* Radar Box */}
-          <div className="relative w-11 h-11 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-md bg-black/80 border border-cyan-500/40 p-0.5 sm:p-1 flex items-center justify-center overflow-hidden shadow-[0_0_20px_rgba(0,240,255,0.2)] flex-shrink-0">
+          <div className="relative w-11 h-11 sm:w-16 sm:h-16 rounded-md bg-black/80 border border-cyan-500/40 p-0.5 sm:p-1 flex items-center justify-center overflow-hidden shadow-[0_0_20px_rgba(0,240,255,0.2)] flex-shrink-0">
             {/* Radar Grid Texture */}
             <div className="absolute inset-0 bg-radar-grid opacity-50"/>
 
@@ -250,7 +254,7 @@ export const HeroSection = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-[#ff2a85] animate-pulse"/>
               <span>CURRENT OBJECTIVE</span>
             </div>
-            <div className="font-bebas text-sm sm:text-xl md:text-2xl text-white tracking-wide leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] truncate sm:whitespace-normal">
+            <div className="font-bebas text-sm sm:text-xl text-white tracking-wide leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] truncate sm:whitespace-normal">
               BUILD NEXT LEVEL DIGITAL EXPERIENCES
             </div>
             <div className="hidden sm:block text-[10px] text-slate-400 tracking-wide font-sans">
@@ -266,7 +270,7 @@ export const HeroSection = () => {
 
         {/* Bottom Right: Cursive Signature Quote (Desktop & Tablet) */}
         <div className="hidden sm:block pointer-events-auto text-right font-mono-code">
-          <div className="font-script text-base sm:text-xl md:text-[24px] text-slate-200 tracking-wide italic leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+          <div className="font-script text-base sm:text-xl text-slate-200 tracking-wide italic leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
             "Code is my weapon, Creativity is my world."
           </div>
           <div className="font-script text-base sm:text-xl text-[#ff2a85] tracking-wider mt-0.5 drop-shadow-[0_0_10px_rgba(255,42,133,0.8)]">
