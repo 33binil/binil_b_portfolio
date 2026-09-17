@@ -177,8 +177,10 @@ export const CinematicGameScreen = ({ backgroundImage, superTitle, title, script
       {/* ========================================================================= */}
       {/* MIDDLE LEFT: THE SCREEN CONTENT (Scrollable on mobile)                    */}
       {/* ========================================================================= */}
-      <div className="relative z-20 px-3.5 sm:px-8 md:px-12 flex-1 overflow-y-auto min-h-0 flex flex-col justify-center max-w-sm sm:max-w-md w-full py-2 sm:py-0">
-        {children}
+      <div className="relative z-20 px-3.5 sm:px-8 md:px-12 flex-1 overflow-y-auto min-h-0 max-w-sm sm:max-w-md w-full py-2 sm:py-0">
+        <div className="min-h-full flex flex-col justify-center">
+          {children}
+        </div>
       </div>
 
       {/* ========================================================================= */}

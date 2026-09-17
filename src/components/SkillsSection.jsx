@@ -290,7 +290,7 @@ export const SkillsSection = () => {
     >
       {/* Left Docked Skill Bars with Smooth Tactical Scroll */}
       <div className="max-w-sm sm:max-w-md w-full flex flex-col gap-2">
-        <div className="space-y-1.5 sm:space-y-2 max-h-[48dvh] sm:max-h-[52dvh] overflow-y-auto pr-1 scrollbar-thin">
+        <div className="space-y-1.5 sm:space-y-2 max-h-[38dvh] min-[480px]:max-h-[46dvh] sm:max-h-[52dvh] lg:max-h-[56dvh] overflow-y-auto pr-1 scrollbar-thin">
           {PRIMARY_SKILLS.map((skill, idx) => {
             const isSelected = selectedSkill.name === skill.name;
             return (
