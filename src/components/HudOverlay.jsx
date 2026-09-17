@@ -20,7 +20,7 @@ const OBJECTIVES_MAP = {
         tag: 'MISSION 03 // ARSENAL',
     },
     projects: {
-        title: 'INSPECT COMPLETED BUILDS',
+        title: 'INSPECT COMPLETED B',
         subtitle: 'ANALYZE PRODUCTION DEPLOYMENTS',
         tag: 'MISSION 04 // OPERATIONS',
     },
@@ -36,7 +36,7 @@ const OBJECTIVES_MAP = {
     },
     services: {
         title: 'EVALUATE CAPABILITIES & SERVICES',
-        subtitle: 'CUSTOM DIGITAL BUILDS ON DEMAND',
+        subtitle: 'CUSTOM DIGITAL B ON DEMAND',
         tag: 'MISSION 07 // CONTRACTS',
     },
     contact: {

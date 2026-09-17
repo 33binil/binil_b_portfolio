@@ -222,7 +222,7 @@ export const CinematicGameScreen = ({ backgroundImage, superTitle, title, script
 
         {/* Bottom Center Tag */}
         <div className="hidden lg:block text-center font-bebas text-sm tracking-[0.3em] text-slate-500/70">
-          BINIL.BUILDS
+          BINIL.B
         </div>
 
         {/* Bottom Right: Cursive Signature Quote (Desktop & Tablet) */}

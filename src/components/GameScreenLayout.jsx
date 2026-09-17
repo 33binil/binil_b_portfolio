@@ -135,7 +135,7 @@ export const GameScreenLayout = ({ activeMenuId, scriptSubtitle, missionCode, mi
       {/* TOP HUD BAR: LOGO (LEFT) | COMPASS & MISSION (CENTER) | STATUS (RIGHT)   */}
       {/* ========================================================================= */}
       <header className="relative z-30 w-full px-4 sm:px-8 md:px-12 pt-4 sm:pt-6 flex items-start justify-between flex-shrink-0">
-        {/* Top Left: Logo / Branding ("BINIL BUILDS <Subtitle>") */}
+        {/* Top Left: Logo / Branding ("BINIL B <Subtitle>") */}
         <button onClick={() => {
             playUiClick();
             navigate('/');
@@ -144,7 +144,7 @@ export const GameScreenLayout = ({ activeMenuId, scriptSubtitle, missionCode, mi
             BINIL
           </div>
           <div className="font-bebas text-4xl sm:text-5xl md:text-6xl lg:text-[68px] leading-[0.82] tracking-wider text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-            BUILDS
+            B
           </div>
           <span className="font-script text-2xl sm:text-3xl text-[#ff2a85] -rotate-6 ml-3 sm:ml-5 -mt-1 drop-shadow-[0_0_15px_rgba(255,42,133,0.9)] font-bold tracking-wide">
             {scriptSubtitle}
@@ -332,7 +332,7 @@ export const GameScreenLayout = ({ activeMenuId, scriptSubtitle, missionCode, mi
 
         {/* Bottom Center / Mobile Tag */}
         <div className="hidden lg:block text-center font-bebas text-sm tracking-[0.3em] text-slate-500/70">
-          BINIL.BUILDS
+          BINIL.B
         </div>
 
         {/* Bottom Right: Cursive Signature Quote */}
@@ -352,7 +352,7 @@ export const GameScreenLayout = ({ activeMenuId, scriptSubtitle, missionCode, mi
       {mobileMenuOpen && (<div className="fixed inset-0 z-50 bg-[#07090e]/98 backdrop-blur-xl border-t border-cyan-500/40 p-6 flex flex-col justify-between overflow-y-auto lg:hidden">
           <div className="flex items-center justify-between border-b border-white/10 pb-4">
             <div className="flex items-center gap-2">
-              <div className="font-bebas text-3xl text-white">BINIL BUILDS</div>
+              <div className="font-bebas text-3xl text-white">BINIL B</div>
               <span className="text-[10px] font-mono-code px-1.5 py-0.5 rounded bg-pink-500/20 text-pink-300 border border-pink-500/30">
                 MENU
               </span>

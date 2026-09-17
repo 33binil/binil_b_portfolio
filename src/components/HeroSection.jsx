@@ -114,13 +114,13 @@ export const HeroSection = () => {
       {/* TOP HUD BAR: LOGO (LEFT) | COMPASS & COUNTDOWN (CENTER) | STATUS (RIGHT)  */}
       {/* ========================================================================= */}
       <div className="hero-top-bar relative z-20 w-full px-3.5 sm:px-8 md:px-12 pt-3 sm:pt-6 flex items-start justify-between pointer-events-none flex-shrink-0">
-        {/* Top Left: Logo / Branding ("BINIL BUILDS Portfolio") */}
+        {/* Top Left: Logo / Branding ("BINIL B Portfolio") */}
         <div className="pointer-events-auto flex flex-col items-start -mt-0.5 sm:mt-0">
           <h1 className="hero-logo-h1 font-bebas text-4xl sm:text-6xl md:text-7xl lg:text-[88px] leading-[0.85] tracking-wider text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
             BINIL
           </h1>
           <h2 className="hero-logo-h1 font-bebas text-4xl sm:text-6xl md:text-7xl lg:text-[88px] leading-[0.85] tracking-wider text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-            BUILDS
+            B
           </h2>
           <span className="hero-logo-span font-script text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-[#ff2a85] -rotate-6 ml-2 sm:ml-6 -mt-1 sm:-mt-2 drop-shadow-[0_0_15px_rgba(255,42,133,0.9)] font-bold tracking-wide">
             Portfolio
@@ -264,7 +264,7 @@ export const HeroSection = () => {
 
         {/* Bottom Center / Mobile Tag */}
         <div className="hidden lg:block text-center font-bebas text-lg md:text-xl tracking-[0.3em] text-slate-400/80">
-          BINIL.BUILDS
+          BINIL.B
         </div>
 
         {/* Bottom Right: Cursive Signature Quote (Desktop & Tablet) */}
