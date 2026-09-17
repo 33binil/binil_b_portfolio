@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { User, Volume2, VolumeX, Shield, Star, Download, ExternalLink, X, Menu, ArrowLeft } from 'lucide-react';
-import { contactData, portfolioImages } from '../data/portfolioData';
+import { contactData, portfolioImages, downloadResume } from '../data/portfolioData';
 import { playUiClick, playUiHover, playMissionPassed, toggleAudioMute, getIsAudioMuted } from '../utils/audio';
 export const GAME_MENU_ITEMS = [
     { id: 'start', label: 'START GAME', path: '/' },
@@ -112,8 +112,7 @@ export const GameScreenLayout = ({ activeMenuId, scriptSubtitle, missionCode, mi
         setIsMuted(muted);
     };
     const handleDownloadResume = () => {
-        playUiClick();
-        window.print();
+        downloadResume();
     };
     const currentBg = backgroundImage || portfolioImages.hero;
     return (<div className="relative w-full min-h-screen lg:h-screen lg:max-h-screen lg:overflow-hidden bg-[#07090e] select-none flex flex-col justify-between">

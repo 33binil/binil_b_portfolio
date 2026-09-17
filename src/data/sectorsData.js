@@ -21,7 +21,7 @@ export const SECTORS = [
         label: 'SKILLS',
         title: 'TECHNICAL ARSENAL & PROFICIENCY',
         subtitle: 'FRONTEND, BACKEND & UI/UX STACK',
-        description: 'Inspect modular toolkits including React, Next.js, Tailwind CSS, JavaScript, Node.js, and Figma.',
+        description: 'Inspect modular toolkits including Figma / Adobe XD, Git / GitHub, Frontend, Full Stack, Python, Java, React, Node.js, and modern styling.',
         category: 'CAPABILITIES',
         badge: 'UNLOCKED',
         stats: '25+ TECHNOLOGIES',

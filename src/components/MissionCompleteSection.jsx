@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CinematicGameScreen } from './CinematicGameScreen';
-import { portfolioImages } from '../data/portfolioData';
+import { portfolioImages, downloadResume } from '../data/portfolioData';
 import { playUiClick, playUiHover } from '../utils/audio';
 import { Download, Home } from 'lucide-react';
 export const MissionCompleteSection = () => {
@@ -11,8 +11,7 @@ export const MissionCompleteSection = () => {
         navigate('/');
     };
     const handleDownloadResume = () => {
-        playUiClick();
-        window.print();
+        downloadResume();
     };
     return (<CinematicGameScreen superTitle="THANK YOU FOR VISITING" title="MISSION COMPLETE" scriptSubtitle="See you soon!" scriptColor="text-[#ff2a85]" cash="$3,000,000" stars={5} locationName="SUNSET BOULEVARD" locationSubtitle="Ocean Drive" objectiveText="RIDE OFF INTO THE SUNRISE" backgroundImage={portfolioImages.complete} showMissionPassed={true}>
       {/* Left Docked Content as in Reference Image 6 */}

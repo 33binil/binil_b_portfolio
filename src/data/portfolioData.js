@@ -7,6 +7,9 @@ import contactImg from '../assets/images/contact_downtown_binil_1789551503434.we
 import achievementsImg from '../assets/images/achievements_downtown_1789554746385.webp';
 import completeImg from '../assets/images/complete_sunset_1789554766885.webp';
 import academyImg from '../assets/images/academy_campus_binil_1789590156493.webp';
+import resumePdf from '../assets/images/BINILB_FULLSTACK_DEVELOPER.pdf';
+export { resumePdf };
+export { downloadResume } from '../utils/downloadResume';
 export const portfolioImages = {
     hero: heroImg,
     about: aboutImg,
@@ -29,7 +32,8 @@ export const contactData = {
     github: 'https://github.com/33binil',
     linkedin: 'https://linkedin.com/in/33binilb',
     instagram: 'https://instagram.com/binil_.b',
-    resumeUrl: '#download-resume',
+    resumeUrl: resumePdf,
+    resumeFileName: 'BINILB_FULLSTACK_DEVELOPER.pdf',
 };
 export const contactChannels = [
     {
@@ -85,6 +89,7 @@ export const skillCategories = [
         title: 'FRONTEND',
         description: 'Engineering responsive, high-performance interfaces with modern frameworks.',
         skills: [
+            { name: 'Frontend Developing', level: 'CORE' },
             { name: 'HTML5', level: 'CORE' },
             { name: 'CSS3 / Modern CSS', level: 'CORE' },
             { name: 'JavaScript (ES6+)', level: 'CORE' },
@@ -92,13 +97,18 @@ export const skillCategories = [
             { name: 'Next.js', level: 'ADVANCED' },
             { name: 'Tailwind CSS', level: 'CORE' },
             { name: 'Vite', level: 'ADVANCED' },
+            { name: 'Python Web / UI Integration', level: 'ADVANCED' },
+            { name: 'Java Web / Full Stack UI', level: 'WORKING' },
         ],
     },
     {
         id: 'backend',
-        title: 'BACKEND',
+        title: 'BACKEND & FULL STACK',
         description: 'Developing RESTful APIs, data schemas, and server-side runtimes.',
         skills: [
+            { name: 'Full Stack Developing', level: 'ADVANCED' },
+            { name: 'Python (Backend & APIs)', level: 'ADVANCED' },
+            { name: 'Java (OOP & Backend Services)', level: 'ADVANCED' },
             { name: 'Node.js', level: 'ADVANCED' },
             { name: 'Express.js', level: 'ADVANCED' },
             { name: 'MongoDB', level: 'WORKING' },
@@ -111,7 +121,9 @@ export const skillCategories = [
         title: 'UI / UX DESIGN',
         description: 'Synthesizing user journeys into high-fidelity prototypes and design systems.',
         skills: [
+            { name: 'Figma / Adobe XD', level: 'CORE' },
             { name: 'Figma', level: 'CORE' },
+            { name: 'Adobe XD', level: 'ADVANCED' },
             { name: 'UI Design', level: 'ADVANCED' },
             { name: 'UX Design', level: 'ADVANCED' },
             { name: 'Wireframing', level: 'CORE' },
@@ -137,6 +149,7 @@ export const skillCategories = [
         title: 'TOOLS & DEVOPS',
         description: 'Workflow management, version control, and cloud deployment pipelines.',
         skills: [
+            { name: 'Git / GitHub', level: 'CORE' },
             { name: 'Git', level: 'CORE' },
             { name: 'GitHub', level: 'CORE' },
             { name: 'VS Code', level: 'CORE' },

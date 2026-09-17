@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CinematicGameScreen } from './CinematicGameScreen';
-import { portfolioImages, contactData } from '../data/portfolioData';
+import { portfolioImages, contactData, downloadResume } from '../data/portfolioData';
 import { playUiClick, playUiHover, playMissionPassed } from '../utils/audio';
 import {
   X,
@@ -13,6 +13,7 @@ import {
   MessageCircle,
   Mail,
   ExternalLink,
+  Download,
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
@@ -320,6 +321,16 @@ export const ContactSection = () => {
             <span className="hidden sm:inline">WHATSAPP</span>
           </a>
         </div>
+
+        {/* Download Verified Resume */}
+        <button
+          onClick={downloadResume}
+          onMouseEnter={playUiHover}
+          className="w-full py-2.5 px-3 rounded-md bg-black/60 hover:bg-black/80 border border-white/20 hover:border-pink-500/60 text-slate-300 hover:text-white font-mono-code text-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
+        >
+          <Download className="w-3.5 h-3.5 text-pink-400" />
+          <span>DOWNLOAD RESUME (PDF)</span>
+        </button>
       </div>
     </CinematicGameScreen>
   );

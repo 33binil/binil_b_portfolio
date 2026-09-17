@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X, Download, Terminal } from 'lucide-react';
 import { playUiClick, playUiHover } from '../utils/audio';
+import { downloadResume } from '../utils/downloadResume';
 const NAV_ITEMS = [
     { path: '/', label: 'START', mission: 'MISSION 01' },
     { path: '/about', label: 'ABOUT', mission: 'MISSION 02' },
@@ -30,8 +31,7 @@ export const Navbar = () => {
         setMobileMenuOpen(false);
     };
     const handleResumeDownload = () => {
-        playUiClick();
-        window.print();
+        downloadResume();
     };
     return (<header className="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
       <nav aria-label="Main Navigation" className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 transition-all duration-300 ${isScrolled

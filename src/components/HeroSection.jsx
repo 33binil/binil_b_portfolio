@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User, Volume2, VolumeX, Star, Shield, Download, ExternalLink, X } from 'lucide-react';
-import { portfolioImages, contactData } from '../data/portfolioData';
+import { portfolioImages, contactData, downloadResume } from '../data/portfolioData';
 import { playUiClick, playUiHover, playMissionPassed, toggleAudioMute, getIsAudioMuted } from '../utils/audio';
 const MENU_ITEMS = [
     { id: 'start', label: 'START GAME', path: '/about' },
@@ -92,8 +92,7 @@ export const HeroSection = () => {
         setIsMuted(muted);
     };
     const handleDownloadResume = () => {
-        playUiClick();
-        window.print();
+        downloadResume();
     };
     return (<div className="relative w-full h-[100dvh] min-h-[100dvh] overflow-hidden bg-[#07090e] select-none flex flex-col justify-between">
       {/* Fullscreen Cinematic Background Art (Character + Sports Car + Vice City Sunset) */}
