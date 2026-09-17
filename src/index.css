@@ -140,3 +140,76 @@
   animation: neonBeaconPulse 1.8s infinite cubic-bezier(0.4, 0, 0.6, 1);
 }
 
+/* Vertical Height Responsive Rules for Hero Section (< 930px height) */
+@media (max-height: 930px) {
+  .hero-top-bar {
+    padding-top: 0.5rem !important;
+  }
+  .hero-bottom-bar {
+    padding-bottom: 0.5rem !important;
+  }
+  .hero-logo-h1 {
+    font-size: clamp(2.25rem, 5.5vh, 4rem) !important;
+  }
+  .hero-logo-span {
+    font-size: clamp(1.35rem, 3.5vh, 2.5rem) !important;
+  }
+  .hero-menu-container {
+    max-width: 26rem !important;
+  }
+  .hero-menu-nav {
+    gap: 0.25rem !important;
+  }
+  .hero-menu-button {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  .hero-menu-item-text {
+    font-size: clamp(1.1rem, 2.6vh, 1.65rem) !important;
+  }
+  .hero-menu-arrow {
+    font-size: clamp(1.1rem, 2.6vh, 1.65rem) !important;
+  }
+  .hero-keyboard-hint {
+    padding-top: 0.4rem !important;
+    font-size: 0.75rem !important;
+  }
+  .hero-clock-text {
+    font-size: 1.25rem !important;
+  }
+  .hero-cash-text {
+    font-size: 1.5rem !important;
+  }
+  .hero-objective-title {
+    font-size: 1.25rem !important;
+  }
+  .hero-signature-text {
+    font-size: 1.15rem !important;
+  }
+}
+
+@media (max-height: 780px) {
+  .hero-logo-h1 {
+    font-size: clamp(1.75rem, 4.8vh, 3rem) !important;
+  }
+  .hero-logo-span {
+    font-size: clamp(1.1rem, 3vh, 1.8rem) !important;
+  }
+  .hero-menu-button {
+    padding-top: 0.15rem !important;
+    padding-bottom: 0.15rem !important;
+  }
+  .hero-menu-nav {
+    gap: 0.15rem !important;
+  }
+  .hero-menu-item-text {
+    font-size: clamp(0.95rem, 2.2vh, 1.3rem) !important;
+  }
+  .hero-menu-arrow {
+    font-size: clamp(0.95rem, 2.2vh, 1.3rem) !important;
+  }
+}
+
+

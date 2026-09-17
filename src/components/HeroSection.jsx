@@ -113,30 +113,30 @@ export const HeroSection = () => {
       {/* ========================================================================= */}
       {/* TOP HUD BAR: LOGO (LEFT) | COMPASS & COUNTDOWN (CENTER) | STATUS (RIGHT)  */}
       {/* ========================================================================= */}
-      <div className="relative z-20 w-full px-3.5 sm:px-8 md:px-12 pt-3 sm:pt-6 flex items-start justify-between pointer-events-none flex-shrink-0">
+      <div className="hero-top-bar relative z-20 w-full px-3.5 sm:px-8 md:px-12 pt-3 sm:pt-6 flex items-start justify-between pointer-events-none flex-shrink-0">
         {/* Top Left: Logo / Branding ("BINIL BUILDS Portfolio") */}
         <div className="pointer-events-auto flex flex-col items-start -mt-0.5 sm:mt-0">
-          <h1 className="font-bebas text-3xl sm:text-5xl md:text-6xl lg:text-[76px] leading-[0.85] tracking-wider text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
+          <h1 className="hero-logo-h1 font-bebas text-4xl sm:text-6xl md:text-7xl lg:text-[88px] leading-[0.85] tracking-wider text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
             BINIL
           </h1>
-          <h2 className="font-bebas text-3xl sm:text-5xl md:text-6xl lg:text-[76px] leading-[0.85] tracking-wider text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
+          <h2 className="hero-logo-h1 font-bebas text-4xl sm:text-6xl md:text-7xl lg:text-[88px] leading-[0.85] tracking-wider text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
             BUILDS
           </h2>
-          <span className="font-script text-xl sm:text-3xl md:text-4xl lg:text-5xl text-[#ff2a85] -rotate-6 ml-2 sm:ml-6 -mt-1 sm:-mt-2 drop-shadow-[0_0_15px_rgba(255,42,133,0.9)] font-bold tracking-wide">
+          <span className="hero-logo-span font-script text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-[#ff2a85] -rotate-6 ml-2 sm:ml-6 -mt-1 sm:-mt-2 drop-shadow-[0_0_15px_rgba(255,42,133,0.9)] font-bold tracking-wide">
             Portfolio
           </span>
         </div>
 
         {/* Top Center: Coordinates & Mission Countdown (Desktop & Tablet) */}
         <div className="hidden md:flex flex-col items-center text-center font-mono-code pt-1">
-          <div className="flex items-center gap-1 text-[11px] text-white/80 font-bold tracking-widest uppercase">
-            <span className="text-white text-[10px]">▲</span>
+          <div className="flex items-center gap-1.5 text-xs sm:text-sm text-white/80 font-bold tracking-widest uppercase">
+            <span className="text-white text-xs">▲</span>
             <span>104.9</span>
           </div>
-          <div className="text-[10px] text-[#ff2a85] font-bold tracking-wider uppercase mt-1 drop-shadow-[0_0_8px_#ff2a85]">
+          <div className="text-xs sm:text-sm text-[#ff2a85] font-bold tracking-wider uppercase mt-1 drop-shadow-[0_0_8px_#ff2a85]">
             LEONIDA DROPS IN
           </div>
-          <div className="text-sm md:text-base font-bold text-white tracking-widest drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+          <div className="text-base md:text-xl font-bold text-white tracking-widest drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] mt-0.5">
             108 : 15 : 33 : {String(countdownSeconds).padStart(2, '0')}
           </div>
         </div>
@@ -144,33 +144,33 @@ export const HeroSection = () => {
         {/* Top Right: GTA Clock, Cash, Weapon/Health & Sound HUD */}
         <div className="pointer-events-auto flex flex-col items-end text-right font-mono-code">
           {/* In-Game Clock */}
-          <div className="text-sm sm:text-xl md:text-2xl font-bold text-white tracking-wider drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+          <div className="hero-clock-text text-lg sm:text-2xl md:text-3xl font-bold text-white tracking-wider drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
             {currentTime}
           </div>
 
           {/* Neon Green Cash / Net Worth */}
-          <div className="text-base sm:text-2xl md:text-3xl font-bold text-[#32f38d] tracking-wide drop-shadow-[0_0_12px_rgba(50,243,141,0.6)]">
+          <div className="hero-cash-text text-xl sm:text-3xl md:text-4xl font-bold text-[#32f38d] tracking-wide drop-shadow-[0_0_12px_rgba(50,243,141,0.6)]">
             $1,250,000
           </div>
 
           {/* Health & Armor + Star Level */}
-          <div className="flex items-center gap-1.5 sm:gap-2 mt-0.5 sm:mt-1">
+          <div className="flex items-center gap-1.5 sm:gap-2 mt-1">
             <div className="flex items-center gap-0.5 text-[#ffd200]">
-              <Star className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current"/>
-              <Star className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current"/>
-              <Star className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current"/>
-              <Star className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current"/>
-              <Star className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current"/>
+              <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-current"/>
+              <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-current"/>
+              <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-current"/>
+              <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-current"/>
+              <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-current"/>
             </div>
 
-            <div className="flex items-center gap-1 px-1.5 py-0.5 bg-black/60 border border-white/20 rounded">
-              <Shield className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#32f38d]"/>
-              <span className="text-[10px] sm:text-xs font-bold text-white">100</span>
+            <div className="flex items-center gap-1 px-2 py-0.5 bg-black/60 border border-white/20 rounded">
+              <Shield className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#32f38d]"/>
+              <span className="text-xs sm:text-sm font-bold text-white">100</span>
             </div>
 
             {/* Audio Toggle */}
             <button onClick={handleToggleMute} className="p-1 rounded bg-black/60 border border-white/20 text-slate-300 hover:text-white transition-colors cursor-pointer" title={isMuted ? 'Unmute Audio' : 'Mute Audio'}>
-              {isMuted ? <VolumeX className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-pink-400"/> : <Volume2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-cyan-400"/>}
+              {isMuted ? <VolumeX className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-pink-400"/> : <Volume2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-400"/>}
             </button>
           </div>
         </div>
@@ -179,8 +179,8 @@ export const HeroSection = () => {
       {/* ========================================================================= */}
       {/* MIDDLE LEFT: THE ICONIC GAME START MENU LIST                              */}
       {/* ========================================================================= */}
-      <div className="relative z-20 px-3.5 sm:px-8 md:px-12 flex-1 overflow-y-auto min-h-0 flex flex-col justify-center max-w-sm sm:max-w-md w-full py-1.5 sm:py-0">
-        <nav aria-label="Game Start Menu" className="flex flex-col space-y-0.5 sm:space-y-1.5">
+      <div className="hero-menu-container relative z-20 px-3.5 sm:px-8 md:px-12 flex-1 overflow-y-auto min-h-0 flex flex-col justify-center max-w-md sm:max-w-lg w-full py-1.5 sm:py-0">
+        <nav aria-label="Game Start Menu" className="hero-menu-nav flex flex-col space-y-1 sm:space-y-2">
           {MENU_ITEMS.map((item, idx) => {
             const isSelected = selectedIndex === idx;
             return (<button key={item.id} onClick={() => handleMenuItemClick(item, idx)} onMouseEnter={() => {
@@ -188,19 +188,19 @@ export const HeroSection = () => {
                         playUiHover();
                         setSelectedIndex(idx);
                     }
-                }} className={`group relative text-left py-1 sm:py-2 px-2.5 sm:px-4 rounded-md transition-all duration-150 flex items-center justify-between cursor-pointer ${isSelected
-                    ? 'bg-gradient-to-r from-[#ff1f7d] via-[#ff2a85] to-[#f41459] text-white shadow-[0_0_25px_rgba(255,42,133,0.6)] translate-x-1 sm:translate-x-2 font-bold'
-                    : 'text-slate-200/90 hover:text-white hover:translate-x-1'}`}>
-                <div className="flex items-center gap-1.5 sm:gap-2.5">
-                  <span className={`font-bebas text-lg sm:text-2xl tracking-wide leading-none transition-colors ${isSelected ? 'text-white' : 'text-slate-200 group-hover:text-white'}`}>
+                }} className={`hero-menu-button group relative text-left py-1.5 sm:py-2.5 px-3 sm:px-5 rounded-md transition-all duration-150 flex items-center justify-between cursor-pointer ${isSelected
+                    ? 'bg-gradient-to-r from-[#ff1f7d] via-[#ff2a85] to-[#f41459] text-white shadow-[0_0_30px_rgba(255,42,133,0.7)] translate-x-1.5 sm:translate-x-3 font-bold'
+                    : 'text-slate-200/90 hover:text-white hover:translate-x-1.5'}`}>
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <span className={`hero-menu-item-text font-bebas text-xl sm:text-3xl md:text-4xl tracking-wide leading-none transition-colors ${isSelected ? 'text-white' : 'text-slate-200 group-hover:text-white'}`}>
                     {item.label}
                   </span>
 
-                  {item.hasUserIcon && (<User className={`w-3 h-3 sm:w-4 sm:h-4 ${isSelected ? 'text-white' : 'text-slate-400 group-hover:text-white'}`}/>)}
+                  {item.hasUserIcon && (<User className={`hero-menu-icon w-4 h-4 sm:w-5 sm:h-5 ${isSelected ? 'text-white' : 'text-slate-400 group-hover:text-white'}`}/>)}
                 </div>
 
                 {/* Right Arrow Indicator on Active Item */}
-                {isSelected && (<span className="font-bebas text-base sm:text-xl text-white animate-pulse pr-1">
+                {isSelected && (<span className="hero-menu-arrow font-bebas text-lg sm:text-2xl md:text-3xl text-white animate-pulse pr-1">
                     &gt;
                   </span>)}
               </button>);
@@ -208,7 +208,7 @@ export const HeroSection = () => {
         </nav>
 
         {/* Keyboard hint */}
-        <div className="hidden sm:flex items-center gap-3 pt-3 text-[10px] sm:text-xs font-mono-code text-slate-400">
+        <div className="hero-keyboard-hint hidden sm:flex items-center gap-3 pt-3.5 text-xs sm:text-sm font-mono-code text-slate-300 font-semibold">
           <span>[W / S] NAVIGATE</span>
           <span>•</span>
           <span>[ENTER] SELECT</span>
@@ -218,7 +218,7 @@ export const HeroSection = () => {
       {/* ========================================================================= */}
       {/* BOTTOM HUD BAR: RADAR & OBJECTIVE (LEFT) | SIGNATURE QUOTE (RIGHT)         */}
       {/* ========================================================================= */}
-      <div className="relative z-20 w-full px-3.5 sm:px-8 md:px-12 pb-3 sm:pb-6 flex items-end justify-between gap-3 pointer-events-none flex-shrink-0">
+      <div className="hero-bottom-bar relative z-20 w-full px-3.5 sm:px-8 md:px-12 pb-3 sm:pb-6 flex items-end justify-between gap-3 pointer-events-none flex-shrink-0">
         {/* Bottom Left: Tactical Radar & Current Objective Widget */}
         <div className="pointer-events-auto flex items-center gap-2.5 sm:gap-3.5 md:gap-4 min-w-0">
           {/* Radar Box */}
@@ -231,7 +231,7 @@ export const HeroSection = () => {
             <div className="absolute w-4 h-4 sm:w-6 sm:h-6 rounded-full border border-cyan-500/40"/>
 
             {/* North Indicator */}
-            <span className="absolute top-0.5 left-1 text-[8px] sm:text-[9px] font-mono-code font-bold text-cyan-300">
+            <span className="absolute top-0.5 left-1 text-[10px] sm:text-xs font-mono-code font-bold text-cyan-300">
               N
             </span>
 
@@ -249,30 +249,30 @@ export const HeroSection = () => {
 
           {/* Current Objective Text */}
           <div className="font-mono-code min-w-0">
-            <div className="text-[9px] sm:text-[11px] font-bold text-[#ff2a85] tracking-widest uppercase flex items-center gap-1 sm:gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff2a85] animate-pulse"/>
+            <div className="text-xs sm:text-sm font-bold text-[#ff2a85] tracking-widest uppercase flex items-center gap-1.5 sm:gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#ff2a85] animate-pulse"/>
               <span>CURRENT OBJECTIVE</span>
             </div>
-            <div className="font-bebas text-sm sm:text-xl text-white tracking-wide leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] truncate sm:whitespace-normal">
+            <div className="hero-objective-title font-bebas text-lg sm:text-2xl md:text-3xl text-white tracking-wide leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] truncate sm:whitespace-normal">
               BUILD NEXT LEVEL DIGITAL EXPERIENCES
             </div>
-            <div className="hidden sm:block text-[10px] text-slate-400 tracking-wide font-sans">
+            <div className="hidden sm:block text-xs sm:text-sm text-slate-300 tracking-wide font-sans mt-0.5">
               Vice City Inspired • Build Different • Stay Legendary
             </div>
           </div>
         </div>
 
         {/* Bottom Center / Mobile Tag */}
-        <div className="hidden lg:block text-center font-bebas text-sm tracking-[0.3em] text-slate-500/70">
+        <div className="hidden lg:block text-center font-bebas text-lg md:text-xl tracking-[0.3em] text-slate-400/80">
           BINIL.BUILDS
         </div>
 
         {/* Bottom Right: Cursive Signature Quote (Desktop & Tablet) */}
         <div className="hidden sm:block pointer-events-auto text-right font-mono-code">
-          <div className="font-script text-base sm:text-xl text-slate-200 tracking-wide italic leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+          <div className="hero-signature-text font-script text-lg sm:text-2xl md:text-3xl text-slate-200 tracking-wide italic leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
             "Code is my weapon, Creativity is my world."
           </div>
-          <div className="font-script text-base sm:text-xl text-[#ff2a85] tracking-wider mt-0.5 drop-shadow-[0_0_10px_rgba(255,42,133,0.8)]">
+          <div className="hero-signature-text font-script text-lg sm:text-2xl md:text-3xl text-[#ff2a85] tracking-wider mt-0.5 drop-shadow-[0_0_10px_rgba(255,42,133,0.8)]">
             — Binil B
           </div>
         </div>
