@@ -200,6 +200,8 @@
   .hero-menu-button {
     padding-top: 0.15rem !important;
     padding-bottom: 0.15rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
   .hero-menu-nav {
     gap: 0.15rem !important;
@@ -211,5 +213,39 @@
     font-size: clamp(0.95rem, 2.2vh, 1.3rem) !important;
   }
 }
+
+/* Extreme compact height devices like landscape phones or small netbooks (< 650px height) */
+@media (max-height: 650px) {
+  .hero-top-bar {
+    padding-top: 0.25rem !important;
+  }
+  .hero-bottom-bar {
+    padding-bottom: 0.25rem !important;
+  }
+  .hero-logo-h1 {
+    font-size: clamp(1.5rem, 4vh, 2.2rem) !important;
+  }
+  .hero-logo-span {
+    font-size: clamp(0.95rem, 2.5vh, 1.35rem) !important;
+  }
+  .hero-menu-container {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+  .hero-menu-button {
+    padding-top: 0.1rem !important;
+    padding-bottom: 0.1rem !important;
+  }
+  .hero-menu-item-text {
+    font-size: clamp(0.85rem, 2vh, 1.15rem) !important;
+  }
+  .hero-menu-arrow {
+    font-size: clamp(0.85rem, 2vh, 1.15rem) !important;
+  }
+  .hero-keyboard-hint {
+    display: none !important;
+  }
+}
+
 
 

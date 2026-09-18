@@ -125,7 +125,7 @@ export const EducationSection = () => {
             <span>VERIFIED CREDENTIALS</span>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-1.5 sm:space-y-2 max-h-[36dvh] sm:max-h-[46dvh] overflow-y-auto pr-1 scrollbar-thin">
             {educationData.map((item) => (
               <div
                 key={item.id}

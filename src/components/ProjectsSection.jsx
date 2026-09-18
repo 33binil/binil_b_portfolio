@@ -211,7 +211,7 @@ export const ProjectsSection = () => {
           </div>
 
           {/* Scrollable list of all 7 projects */}
-          <div className="space-y-2 max-h-[50dvh] overflow-y-auto pr-1">
+          <div className="space-y-1.5 sm:space-y-2 max-h-[38dvh] sm:max-h-[50dvh] overflow-y-auto pr-1 scrollbar-thin">
             {projectsData.map((project) => (
               <div
                 key={project.id}

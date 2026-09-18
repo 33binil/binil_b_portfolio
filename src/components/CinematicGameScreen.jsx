@@ -175,10 +175,10 @@ export const CinematicGameScreen = ({ backgroundImage, superTitle, title, script
       </div>
 
       {/* ========================================================================= */}
-      {/* MIDDLE LEFT: THE SCREEN CONTENT (Scrollable on mobile)                    */}
+      {/* MIDDLE LEFT: THE SCREEN CONTENT (Scrollable on mobile & low height screens) */}
       {/* ========================================================================= */}
-      <div className="relative z-20 px-3.5 sm:px-8 md:px-12 flex-1 overflow-y-auto min-h-0 max-w-sm sm:max-w-md w-full py-2 sm:py-0">
-        <div className="min-h-full flex flex-col justify-center">
+      <div className="relative z-20 px-3.5 sm:px-8 md:px-12 flex-1 overflow-y-auto min-h-0 max-w-sm sm:max-w-md w-full py-1 sm:py-2 scrollbar-thin scroll-pt-2">
+        <div className="min-h-min flex flex-col justify-start">
           {children}
         </div>
       </div>

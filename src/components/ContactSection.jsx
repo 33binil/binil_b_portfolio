@@ -232,7 +232,7 @@ export const ContactSection = () => {
       }
     >
       {/* Left Docked Contact Cards */}
-      <div className="space-y-2 max-w-sm sm:max-w-md">
+      <div className="space-y-1.5 sm:space-y-2 max-w-sm sm:max-w-md">
         <div className="flex items-center justify-between text-[10px] font-mono-code text-slate-400 px-0.5">
           <span className="text-cyan-400 font-bold">
             COMM CHANNELS // {CONTACT_ITEMS.length} ACTIVE
@@ -240,6 +240,7 @@ export const ContactSection = () => {
           <span>DIRECT LINKS</span>
         </div>
 
+        <div className="space-y-1.5 sm:space-y-2 max-h-[38dvh] sm:max-h-[48dvh] overflow-y-auto pr-1 scrollbar-thin">
         {CONTACT_ITEMS.map((item, idx) => {
           const IconComponent = item.icon;
           return (
@@ -294,6 +295,7 @@ export const ContactSection = () => {
             </a>
           );
         })}
+        </div>
 
         {/* Action Buttons: SEND MESSAGE ▸ & WHATSAPP quick button */}
         <div className="pt-1.5 flex gap-2">

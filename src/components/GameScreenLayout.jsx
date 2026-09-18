@@ -12,6 +12,7 @@ export const GAME_MENU_ITEMS = [
     { id: 'academy', label: 'ACADEMY', path: '/education' },
     { id: 'services', label: 'SERVICES', path: '/services' },
     { id: 'contact', label: 'CONTACT', path: '/contact' },
+    { id: 'loading', label: 'LOADING SCREEN', path: '/loading' },
     { id: 'exit', label: 'EXIT GAME', path: '', isAction: true },
 ];
 export const GameScreenLayout = ({ activeMenuId, scriptSubtitle, missionCode, missionObjective, backgroundImage, children, }) => {

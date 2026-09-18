@@ -110,7 +110,7 @@ export const ExperienceSection = () => {
             </div>
           </div>) : null}>
       {/* Left Docked Connected Timeline as in Reference Image 1 */}
-      <div className="relative pl-6 space-y-3 sm:space-y-3.5 max-w-sm sm:max-w-md max-h-[74vh] overflow-y-auto custom-game-scrollbar pr-2">
+      <div className="relative pl-6 space-y-2 sm:space-y-3.5 max-w-sm sm:max-w-md max-h-[50dvh] sm:max-h-[68dvh] overflow-y-auto custom-game-scrollbar pr-2 scrollbar-thin">
         {/* Vertical Connecting Line */}
         <div className="absolute left-[7px] top-2 bottom-2 w-[1.5px] bg-gradient-to-b from-[#00f0ff] via-[#a855f7] via-[#ff2a85] to-[#f59e0b] opacity-60"/>
 
