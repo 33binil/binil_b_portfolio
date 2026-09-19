@@ -27,7 +27,7 @@ export const EducationSection = () => {
                 <div className="flex items-center justify-between border-b border-white/10 pb-3 font-mono-code">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#ffd200] animate-ping" />
-                    <span className="text-[11px] sm:text-xs font-bold text-[#ffd200] tracking-widest uppercase">
+                    <span className="text-[11px] sm:text-xs lg:text-base font-bold text-[#ffd200] tracking-widest uppercase">
                       ACCREDITATION DOSSIER // {selectedItem.badge}
                     </span>
                   </div>
@@ -49,14 +49,14 @@ export const EducationSection = () => {
                       )}
                       {selectedItem.category}
                     </span>
-                    <span className="text-[11px] font-mono-code text-cyan-300 font-bold">
+                    <span className="text-[11px] lg:text-sm font-mono-code text-cyan-300 font-bold">
                       {selectedItem.period}
                     </span>
                   </div>
-                  <h3 className="font-bebas text-2xl sm:text-3xl text-white tracking-wide">
+                  <h3 className="font-bebas text-2xl sm:text-3xl lg:text-5xl text-white tracking-wide">
                     {selectedItem.degree}
                   </h3>
-                  <div className="text-xs font-mono-code text-slate-300 font-medium mt-1 flex items-center gap-1.5">
+                  <div className="text-xs lg:text-base font-mono-code text-slate-300 font-medium mt-1 flex items-center gap-1.5">
                     <MapPin className="w-3.5 h-3.5 text-amber-400 flex-shrink-0" />
                     <span>
                       {selectedItem.institution}
@@ -64,7 +64,7 @@ export const EducationSection = () => {
                     </span>
                   </div>
                   {selectedItem.university && (
-                    <div className="text-[11px] font-mono-code text-slate-400 mt-0.5">
+                    <div className="text-[11px] lg:text-sm font-mono-code text-slate-400 mt-0.5">
                       Affiliation / Provider: <span className="text-white">{selectedItem.university}</span>
                     </div>
                   )}
@@ -75,7 +75,7 @@ export const EducationSection = () => {
                   <div className="text-[10px] font-mono-code text-slate-400 uppercase tracking-wider">
                     CURRICULUM & SPECIALIZATION
                   </div>
-                  <p className="text-xs sm:text-[13px] text-slate-200 font-light leading-relaxed">
+                  <p className="text-xs sm:text-[13px] lg:text-lg text-slate-200 font-light leading-relaxed">
                     {selectedItem.fullDescription}
                   </p>
                 </div>
@@ -87,7 +87,7 @@ export const EducationSection = () => {
                       KEY COMPETENCIES & MODULES
                     </div>
                     {selectedItem.highlights.map((hl, idx) => (
-                      <div key={idx} className="flex items-start gap-2 text-xs text-slate-300">
+                      <div key={idx} className="flex items-start gap-2 text-xs lg:text-base text-slate-300">
                         <CheckCircle className="w-3.5 h-3.5 text-[#ffd200] flex-shrink-0 mt-0.5" />
                         <span>{hl}</span>
                       </div>
@@ -147,20 +147,20 @@ export const EducationSection = () => {
 
                 <div className="flex-1 min-w-0 font-mono-code">
                   <div className="flex items-center justify-between gap-1">
-                    <span className="text-[10px] text-[#ffd200] font-bold tracking-wider">
+                    <span className="text-[10px] lg:text-sm text-[#ffd200] font-bold tracking-wider">
                       {item.category}
                     </span>
-                    <span className="text-[10px] text-slate-400 truncate">
+                    <span className="text-[10px] lg:text-sm text-slate-400 truncate">
                       {item.period}
                     </span>
                   </div>
-                  <div className="font-bebas text-base sm:text-lg text-white tracking-wide leading-tight group-hover:text-[#ffd200] transition-colors truncate mt-0.5">
+                  <div className="font-bebas text-base sm:text-lg lg:text-2xl text-white tracking-wide leading-tight group-hover:text-[#ffd200] transition-colors truncate mt-0.5">
                     {item.shortTitle}
                   </div>
-                  <div className="text-[11px] text-slate-300 font-sans font-light truncate mt-0.5">
+                  <div className="text-[11px] lg:text-sm text-slate-300 font-sans font-light truncate mt-0.5">
                     {item.institution}
                   </div>
-                  <div className="text-[10px] text-slate-400 font-sans font-light truncate">
+                  <div className="text-[10px] lg:text-sm text-slate-400 font-sans font-light truncate">
                     {item.focus}
                   </div>
                 </div>
@@ -176,7 +176,7 @@ export const EducationSection = () => {
                 navigate('/skills');
               }}
               onMouseEnter={playUiHover}
-              className="flex-1 px-4 py-2 rounded-md bg-gradient-to-r from-[#e0a900] via-[#ffd200] to-[#ffaa00] hover:brightness-110 text-black font-bebas text-base sm:text-lg tracking-wider uppercase flex items-center justify-center gap-2 border border-amber-300 shadow-[0_0_20px_rgba(255,210,0,0.4)] transition-all duration-150 cursor-pointer active:scale-95"
+              className="flex-1 px-4 py-2 rounded-md bg-gradient-to-r from-[#e0a900] via-[#ffd200] to-[#ffaa00] hover:brightness-110 text-black font-bebas text-base sm:text-lg lg:text-2xl tracking-wider uppercase flex items-center justify-center gap-2 border border-amber-300 shadow-[0_0_20px_rgba(255,210,0,0.4)] transition-all duration-150 cursor-pointer active:scale-95"
             >
               <span>EXPLORE ARSENAL</span>
               <span className="text-sm group-hover:translate-x-1 transition-transform">▸</span>
@@ -187,7 +187,7 @@ export const EducationSection = () => {
                 navigate('/projects');
               }}
               onMouseEnter={playUiHover}
-              className="px-3 py-2 rounded-md bg-black/60 hover:bg-black/90 text-white font-bebas text-base sm:text-lg tracking-wider uppercase border border-white/20 hover:border-cyan-400 transition-all cursor-pointer"
+              className="px-3 py-2 rounded-md bg-black/60 hover:bg-black/90 text-white font-bebas text-base sm:text-lg lg:text-2xl tracking-wider uppercase border border-white/20 hover:border-cyan-400 transition-all cursor-pointer"
             >
               <span>PROJECTS ▸</span>
             </button>

@@ -177,8 +177,8 @@ export const CinematicGameScreen = ({ backgroundImage, superTitle, title, script
       {/* ========================================================================= */}
       {/* MIDDLE LEFT: THE SCREEN CONTENT (Scrollable on mobile & low height screens) */}
       {/* ========================================================================= */}
-      <div className="relative z-20 px-3.5 sm:px-8 md:px-12 flex-1 overflow-y-auto min-h-0 max-w-sm sm:max-w-md w-full py-1 sm:py-2 scrollbar-thin scroll-pt-2">
-        <div className="min-h-min flex flex-col justify-start">
+      <div className="relative z-20 px-3.5 sm:px-8 md:px-12 flex-1 overflow-y-auto min-h-0 max-w-sm sm:max-w-md w-full py-1 sm:py-2 scrollbar-thin scroll-pt-2 flex flex-col">
+        <div className="min-h-min flex flex-col justify-start my-auto lg:my-0">
           {children}
         </div>
       </div>
@@ -222,7 +222,7 @@ export const CinematicGameScreen = ({ backgroundImage, superTitle, title, script
 
         {/* Bottom Center Tag */}
         <div className="hidden lg:block text-center font-bebas text-sm tracking-[0.3em] text-slate-500/70">
-          BINIL.B
+          BINIL.BUILDS
         </div>
 
         {/* Bottom Right: Cursive Signature Quote (Desktop & Tablet) */}

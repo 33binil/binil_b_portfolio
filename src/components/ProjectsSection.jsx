@@ -32,7 +32,7 @@ export const ProjectsSection = () => {
                 <div className="flex items-center justify-between border-b border-white/10 pb-3 font-mono-code">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
-                    <span className="text-[11px] sm:text-xs font-bold text-cyan-400 tracking-widest uppercase">
+                    <span className="text-[11px] sm:text-xs lg:text-base font-bold text-cyan-400 tracking-widest uppercase">
                       OPERATION DOSSIER // MISSION {selectedProject.id}
                     </span>
                   </div>
@@ -75,10 +75,10 @@ export const ProjectsSection = () => {
                       </span>
                     )}
                   </div>
-                  <h3 className="font-bebas text-2xl sm:text-3xl text-white tracking-wide">
+                  <h3 className="font-bebas text-2xl sm:text-3xl lg:text-5xl text-white tracking-wide">
                     {selectedProject.title}
                   </h3>
-                  <p className="text-xs sm:text-[13px] text-slate-300 font-light mt-1 leading-relaxed">
+                  <p className="text-xs sm:text-[13px] lg:text-lg text-slate-300 font-light mt-1 leading-relaxed">
                     {selectedProject.fullDescription || selectedProject.shortDescription}
                   </p>
                 </div>
@@ -88,7 +88,7 @@ export const ProjectsSection = () => {
                   <div className="text-[10px] font-mono-code text-slate-400 uppercase tracking-wider">
                     TOOLS & ARSENAL
                   </div>
-                  <div className="p-2.5 rounded bg-black/60 border border-white/10 font-mono-code text-xs text-cyan-300">
+                  <div className="p-2.5 rounded bg-black/60 border border-white/10 font-mono-code text-xs lg:text-base text-cyan-300">
                     {selectedProject.tools}
                   </div>
                 </div>
@@ -100,7 +100,7 @@ export const ProjectsSection = () => {
                       MISSION SPECIFICATIONS
                     </div>
                     {selectedProject.keyFeatures.map((hl, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-xs text-slate-300">
+                      <div key={idx} className="flex items-center gap-2 text-xs lg:text-base text-slate-300">
                         <CheckCircle className="w-3.5 h-3.5 text-cyan-400 flex-shrink-0" />
                         <span>{hl}</span>
                       </div>
@@ -183,10 +183,10 @@ export const ProjectsSection = () => {
                           <span className="text-cyan-400 font-bold">MISSION {proj.id}</span>
                           <span className="text-slate-400">{proj.role}</span>
                         </div>
-                        <div className="font-bebas text-lg text-white tracking-wide group-hover:text-cyan-300 transition-colors">
+                        <div className="font-bebas text-lg lg:text-2xl text-white tracking-wide group-hover:text-cyan-300 transition-colors">
                           {proj.title}
                         </div>
-                        <div className="text-[11px] text-slate-400 font-mono-code mt-0.5 truncate">
+                        <div className="text-[11px] lg:text-sm text-slate-400 font-mono-code mt-0.5 truncate">
                           {proj.tools}
                         </div>
                       </div>
@@ -205,7 +205,7 @@ export const ProjectsSection = () => {
         {/* Left Docked Project List as in Reference GTA HUD */}
         <div className="space-y-2 max-w-sm sm:max-w-md">
           {/* Header indicator */}
-          <div className="flex items-center justify-between text-[10px] font-mono-code text-slate-400 px-0.5">
+          <div className="flex items-center justify-between text-[10px] lg:text-sm font-mono-code text-slate-400 px-0.5">
             <span className="text-cyan-400 font-bold">OPERATIONS // SHOWCASE</span>
             <span>{projectsData.length} MISSIONS LOGGED</span>
           </div>
@@ -225,13 +225,13 @@ export const ProjectsSection = () => {
                 </div>
 
                 <div className="flex-1 min-w-0">
-                  <div className="font-bebas text-base sm:text-lg text-white tracking-wide leading-tight group-hover:text-cyan-300 transition-colors truncate">
+                  <div className="font-bebas text-base sm:text-lg lg:text-2xl text-white tracking-wide leading-tight group-hover:text-cyan-300 transition-colors truncate">
                     {project.title.toUpperCase()}
                   </div>
-                  <div className="text-[10px] sm:text-[11px] text-cyan-400/90 font-mono-code truncate">
+                  <div className="text-[10px] sm:text-[11px] lg:text-sm text-cyan-400/90 font-mono-code truncate">
                     {project.role}
                   </div>
-                  <div className="text-[10px] text-slate-400 font-mono-code truncate">
+                  <div className="text-[10px] lg:text-sm text-slate-400 font-mono-code truncate">
                     {project.tools}
                   </div>
                 </div>
@@ -247,7 +247,7 @@ export const ProjectsSection = () => {
                 setShowAllModal(true);
               }}
               onMouseEnter={playUiHover}
-              className="group px-4 py-2 rounded-md bg-gradient-to-r from-[#00b4d8] via-[#00f0ff] to-[#0077b6] hover:brightness-110 text-black font-bebas text-base sm:text-lg tracking-wider uppercase flex items-center gap-2 border border-cyan-300 shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-150 cursor-pointer active:scale-95"
+              className="group px-4 py-2 rounded-md bg-gradient-to-r from-[#00b4d8] via-[#00f0ff] to-[#0077b6] hover:brightness-110 text-black font-bebas text-base sm:text-lg lg:text-2xl tracking-wider uppercase flex items-center gap-2 border border-cyan-300 shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-150 cursor-pointer active:scale-95"
             >
               <span>VIEW ALL {projectsData.length} PROJECTS</span>
               <span className="text-sm group-hover:translate-x-1 transition-transform">▸</span>

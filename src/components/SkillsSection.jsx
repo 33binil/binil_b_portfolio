@@ -224,7 +224,7 @@ export const SkillsSection = () => {
               </div>
 
               {/* Category Filter Pills */}
-              <div className="flex flex-wrap gap-1.5 font-mono-code text-[10px] sm:text-xs">
+              <div className="flex flex-wrap gap-1.5 font-mono-code text-[10px] sm:text-xs lg:text-base">
                 {['ALL', 'DESIGN', 'TOOLS', 'FRONTEND', 'BACKEND'].map((cat) => (
                   <button
                     key={cat}
@@ -251,15 +251,15 @@ export const SkillsSection = () => {
                     className="p-2 sm:p-2.5 rounded bg-black/60 border border-white/10 hover:border-cyan-500/40 transition-colors flex items-center justify-between font-mono-code gap-2"
                   >
                     <div className="min-w-0">
-                      <div className="text-xs text-white font-bold flex items-center gap-1.5">
+                      <div className="text-xs lg:text-base text-white font-bold flex items-center gap-1.5">
                         <span className="truncate">{item.name}</span>
-                        <span className="text-[9px] px-1 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 flex-shrink-0">
+                        <span className="text-[9px] lg:text-xs px-1 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 flex-shrink-0">
                           {item.tag}
                         </span>
                       </div>
-                      <div className="text-[10px] text-slate-400 font-sans mt-0.5">{item.desc}</div>
+                      <div className="text-[10px] lg:text-sm text-slate-400 font-sans mt-0.5">{item.desc}</div>
                     </div>
-                    <span className="text-xs text-cyan-300 font-bold px-2 py-0.5 rounded bg-cyan-500/10 border border-cyan-500/30 flex-shrink-0">
+                    <span className="text-xs lg:text-base text-cyan-300 font-bold px-2 py-0.5 rounded bg-cyan-500/10 border border-cyan-500/30 flex-shrink-0">
                       {item.level}
                     </span>
                   </div>
@@ -311,16 +311,16 @@ export const SkillsSection = () => {
                 }`}
               >
                 <div className="flex items-center justify-between text-xs font-mono-code mb-1">
-                  <span className={`font-bebas text-sm sm:text-base tracking-wider transition-colors ${
+                  <span className={`font-bebas text-sm sm:text-base lg:text-xl tracking-wider transition-colors ${
                     isSelected ? 'text-cyan-300 drop-shadow-[0_0_8px_rgba(0,240,255,0.6)]' : 'text-white group-hover:text-cyan-300'
                   }`}>
                     {skill.name}
                   </span>
                   <div className="flex items-center gap-2">
-                    <span className="text-[10px] text-slate-400 hidden sm:inline-block">
+                    <span className="text-[10px] sm:text-[11px] lg:text-sm text-slate-400 hidden sm:inline-block">
                       {skill.category}
                     </span>
-                    <span className="text-[11px] sm:text-xs text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(0,240,255,0.7)]">
+                    <span className="text-[11px] sm:text-xs lg:text-base text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(0,240,255,0.7)]">
                       {skill.percent}%
                     </span>
                   </div>
@@ -340,17 +340,17 @@ export const SkillsSection = () => {
 
         {/* Tactical Intel Box for selected skill */}
         {selectedSkill && (
-          <div className="p-2.5 sm:p-3 rounded-lg bg-black/85 border border-cyan-500/50 backdrop-blur-md font-mono-code text-[11px] sm:text-xs shadow-[0_0_20px_rgba(0,240,255,0.18)]">
+          <div className="p-2.5 sm:p-3 rounded-lg bg-black/85 border border-cyan-500/50 backdrop-blur-md font-mono-code text-[11px] sm:text-xs lg:text-base shadow-[0_0_20px_rgba(0,240,255,0.18)]">
             <div className="flex items-center justify-between text-cyan-300 font-bold mb-1.5 gap-2">
               <span className="flex items-center gap-2 min-w-0">
                 <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#00f0ff] animate-pulse flex-shrink-0" />
                 <span className="truncate tracking-wider">{selectedSkill.name}</span>
               </span>
-              <span className="text-[9px] sm:text-[10px] text-pink-400 uppercase tracking-widest px-2 py-0.5 rounded-full bg-pink-500/10 border border-pink-500/40 font-mono-code font-bold flex-shrink-0">
+              <span className="text-[9px] sm:text-[10px] lg:text-xs text-pink-400 uppercase tracking-widest px-2 py-0.5 rounded-full bg-pink-500/10 border border-pink-500/40 font-mono-code font-bold flex-shrink-0">
                 {selectedSkill.category}
               </span>
             </div>
-            <p className="text-[10px] sm:text-[11px] text-slate-200 font-sans leading-relaxed">
+            <p className="text-[10px] sm:text-[11px] lg:text-base text-slate-200 font-sans leading-relaxed">
               {selectedSkill.desc}
             </p>
           </div>
@@ -364,7 +364,7 @@ export const SkillsSection = () => {
               setShowArsenalModal(true);
             }}
             onMouseEnter={playUiHover}
-            className="group px-4 py-2 rounded-md bg-gradient-to-r from-cyan-600 via-cyan-500 to-blue-600 hover:brightness-110 text-black font-bebas text-base sm:text-lg tracking-wider uppercase flex items-center gap-2 border border-cyan-300 shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-150 cursor-pointer active:scale-95"
+            className="group px-4 py-2 rounded-md bg-gradient-to-r from-cyan-600 via-cyan-500 to-blue-600 hover:brightness-110 text-black font-bebas text-base sm:text-lg lg:text-2xl tracking-wider uppercase flex items-center gap-2 border border-cyan-300 shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-150 cursor-pointer active:scale-95"
           >
             <span>VIEW FULL ARSENAL</span>
             <span className="text-sm group-hover:translate-x-1 transition-transform">▸</span>

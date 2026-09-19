@@ -71,7 +71,7 @@ export const ExperienceSection = () => {
               <div className="flex items-center justify-between border-b border-white/10 pb-3 font-mono-code">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-purple-400 animate-ping"/>
-                  <span className="text-[11px] sm:text-xs font-bold text-purple-400 tracking-widest uppercase">
+                  <span className="text-[11px] sm:text-xs lg:text-base font-bold text-purple-400 tracking-widest uppercase">
                     CAREER MILESTONE // {selectedTimelineItem.period}
                   </span>
                 </div>
@@ -81,13 +81,13 @@ export const ExperienceSection = () => {
               </div>
 
               <div>
-                <h3 className="font-bebas text-2xl sm:text-3xl text-white tracking-wide">
+                <h3 className="font-bebas text-2xl sm:text-3xl lg:text-5xl text-white tracking-wide">
                   {selectedTimelineItem.role}
                 </h3>
-                <div className="text-xs font-mono-code text-cyan-400 font-semibold mt-0.5">
+                <div className="text-xs lg:text-base font-mono-code text-cyan-400 font-semibold mt-0.5">
                   {selectedTimelineItem.company}
                 </div>
-                <p className="text-xs sm:text-sm text-slate-300 font-light mt-2.5 leading-relaxed font-sans">
+                <p className="text-xs sm:text-sm lg:text-lg text-slate-300 font-light mt-2.5 leading-relaxed font-sans">
                   {selectedTimelineItem.fullDescription || selectedTimelineItem.description}
                 </p>
               </div>
@@ -96,7 +96,7 @@ export const ExperienceSection = () => {
                   <div className="text-[10px] font-mono-code text-slate-400 uppercase tracking-wider">
                     KEY ACHIEVEMENTS
                   </div>
-                  {selectedTimelineItem.achievements.map((ach, idx) => (<div key={idx} className="flex items-center gap-2 text-xs text-slate-300 font-sans">
+                  {selectedTimelineItem.achievements.map((ach, idx) => (<div key={idx} className="flex items-center gap-2 text-xs lg:text-base text-slate-300 font-sans">
                       <CheckCircle className="w-3.5 h-3.5 text-purple-400 flex-shrink-0"/>
                       <span>{ach}</span>
                     </div>))}
@@ -126,20 +126,20 @@ export const ExperienceSection = () => {
             {/* Content */}
             <div className="p-2.5 sm:p-3 rounded-md bg-black/60 hover:bg-black/85 border border-white/10 hover:border-purple-400/50 backdrop-blur-sm transition-all duration-200 shadow-md">
               <div className="flex items-center justify-between gap-2">
-                <span className="text-[10px] sm:text-[11px] font-mono-code font-bold tracking-wider uppercase" style={{ color: item.dotColor }}>
+                <span className="text-[10px] sm:text-[11px] lg:text-sm font-mono-code font-bold tracking-wider uppercase" style={{ color: item.dotColor }}>
                   {item.period}
                 </span>
                 <span className="text-[9px] font-mono-code text-slate-400 opacity-60 group-hover:opacity-100 group-hover:text-cyan-300 transition-opacity">
                   VIEW DOSSIER ▸
                 </span>
               </div>
-              <div className="font-bebas text-base sm:text-lg text-white tracking-wide leading-tight mt-0.5 group-hover:text-purple-300 transition-colors">
+              <div className="font-bebas text-base sm:text-lg lg:text-2xl text-white tracking-wide leading-tight mt-0.5 group-hover:text-purple-300 transition-colors">
                 {item.role}
               </div>
-              <div className="text-[10px] sm:text-[11px] font-mono-code text-cyan-400/90 font-medium">
+              <div className="text-[10px] sm:text-[11px] lg:text-sm font-mono-code text-cyan-400/90 font-medium">
                 {item.company}
               </div>
-              <div className="text-[11px] text-slate-300 font-sans font-light mt-1 leading-snug line-clamp-2">
+              <div className="text-[11px] lg:text-base text-slate-300 font-sans font-light mt-1 leading-snug line-clamp-2">
                 {item.shortDescription || item.description}
               </div>
             </div>

@@ -12,7 +12,6 @@ const MENU_ITEMS = [
     { id: 'academy', label: 'ACADEMY', path: '/education' },
     { id: 'services', label: 'SERVICES', path: '/services' },
     { id: 'contact', label: 'CONTACT', path: '/contact' },
-    { id: 'loading', label: 'LOADING SCREEN', path: '/loading' },
     { id: 'exit', label: 'EXIT GAME', path: '/exit' },
 ];
 export const HeroSection = () => {
@@ -79,11 +78,6 @@ export const HeroSection = () => {
             else if (e.key === 'Enter') {
                 e.preventDefault();
                 handleMenuItemClick(MENU_ITEMS[selectedIndex], selectedIndex);
-            }
-            else if (e.key === 'l' || e.key === 'L') {
-                e.preventDefault();
-                playUiClick();
-                navigate('/loading');
             }
         };
         window.addEventListener('keydown', handleKeyDown);
@@ -206,7 +200,7 @@ export const HeroSection = () => {
       {/* ========================================================================= */}
       {/* MIDDLE LEFT: THE ICONIC GAME START MENU LIST                              */}
       {/* ========================================================================= */}
-      <div ref={menuContainerRef} className="hero-menu-container relative z-20 px-3.5 sm:px-8 md:px-12 flex-1 overflow-y-auto min-h-0 max-w-md sm:max-w-lg w-full py-1 sm:py-2 scrollbar-thin scroll-pt-2">
+      <div ref={menuContainerRef} className="hero-menu-container relative z-20 px-3.5 sm:px-8 md:px-12 flex-1 overflow-y-auto min-h-0 max-w-md sm:max-w-lg w-full flex flex-col justify-center py-1 sm:py-2 scrollbar-thin scroll-pt-2">
         <nav aria-label="Game Start Menu" className="hero-menu-nav flex flex-col space-y-0.5 sm:space-y-1.5 min-h-min pt-1 pb-2">
           {MENU_ITEMS.map((item, idx) => {
             const isSelected = selectedIndex === idx;
@@ -239,8 +233,6 @@ export const HeroSection = () => {
           <span>[W / S] NAVIGATE</span>
           <span>•</span>
           <span>[ENTER] SELECT</span>
-          <span>•</span>
-          <span>[L] LOADING SCREEN</span>
         </div>
       </div>
 

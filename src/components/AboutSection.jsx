@@ -60,7 +60,7 @@ export const AboutSection = () => {
                   <h3 className="font-bebas text-2xl sm:text-3xl text-white tracking-wide">
                     BINIL B
                   </h3>
-                  <p className="text-xs sm:text-[13px] text-slate-300 font-light mt-1.5 leading-relaxed font-sans">
+                  <p className="text-xs sm:text-[13px] lg:text-lg text-slate-300 font-light mt-1.5 leading-relaxed font-sans">
                     I'm a passionate UI/UX Designer and MERN Stack Developer who loves crafting responsive, user-friendly web apps. Using MongoDB, Express.js, React, Node.js, HTML, CSS, JavaScript, and Tailwind CSS, I design and build clean, interactive UIs with robust backends to deliver seamless user experiences.
                   </p>
                 </div>
@@ -73,7 +73,7 @@ export const AboutSection = () => {
                       UI/UX DESIGN
                     </h4>
                   </div>
-                  <p className="text-xs sm:text-[13px] text-slate-300 font-light leading-relaxed font-sans">
+                  <p className="text-xs sm:text-[13px] lg:text-lg text-slate-300 font-light leading-relaxed font-sans">
                     I craft intuitive and visually appealing user experiences with a strong focus on usability, accessibility, and modern design principles. From wireframes to polished prototypes, I design interfaces that balance creativity with functionality to deliver seamless digital experiences.
                   </p>
                 </div>
@@ -86,7 +86,7 @@ export const AboutSection = () => {
                       FULL-STACK DEVELOPMENT
                     </h4>
                   </div>
-                  <p className="text-xs sm:text-[13px] text-slate-300 font-light leading-relaxed font-sans">
+                  <p className="text-xs sm:text-[13px] lg:text-lg text-slate-300 font-light leading-relaxed font-sans">
                     I build responsive, scalable, and interactive web applications with a focus on clean code, performance, and seamless user experience. Leveraging the MERN stack (MongoDB, Express.js, React, Node.js) along with modern frontend technologies like HTML, CSS, JavaScript, and Tailwind CSS, I deliver fast, dynamic, and user-friendly interfaces backed by robust server-side functionality.
                   </p>
                 </div>
@@ -133,13 +133,13 @@ export const AboutSection = () => {
         <div className="space-y-2.5 max-w-sm sm:max-w-md">
           {/* Identity Eyebrow & Intro Bio */}
           <div>
-            <div className="text-[10px] sm:text-[11px] font-mono-code text-[#ff7a45] uppercase tracking-wider font-bold">
+            <div className="text-[10px] sm:text-[11px] lg:text-base font-mono-code text-[#ff7a45] uppercase tracking-wider font-bold">
               HELLO, I'M
             </div>
-            <h2 className="font-bebas text-2xl sm:text-3xl text-white tracking-wide leading-none mt-0.5">
+            <h2 className="font-bebas text-2xl sm:text-3xl lg:text-5xl text-white tracking-wide leading-none mt-0.5">
               BINIL B
             </h2>
-            <p className="text-xs sm:text-[13px] text-slate-200/95 font-light leading-relaxed font-sans mt-1.5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+            <p className="text-xs sm:text-[13px] lg:text-lg text-slate-200/95 font-light leading-relaxed font-sans mt-1.5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
               I'm a passionate UI/UX Designer and MERN Stack Developer who loves crafting responsive, user-friendly web apps. Using MongoDB, Express.js, React, Node.js, HTML, CSS, JavaScript, and Tailwind CSS, I design and build clean, interactive UIs with robust backends to deliver seamless user experiences.
             </p>
           </div>
@@ -156,10 +156,10 @@ export const AboutSection = () => {
                 +
               </div>
               <div className="flex-1 min-w-0">
-                <div className="font-bebas text-base sm:text-lg text-white tracking-wide leading-tight group-hover:text-[#ff7a45] transition-colors">
+                <div className="font-bebas text-base sm:text-lg lg:text-2xl text-white tracking-wide leading-tight group-hover:text-[#ff7a45] transition-colors">
                   UI/UX DESIGN
                 </div>
-                <div className="text-[11px] sm:text-xs text-slate-300 font-sans font-light line-clamp-2 mt-0.5">
+                <div className="text-[11px] sm:text-xs lg:text-base text-slate-300 font-sans font-light line-clamp-2 mt-0.5">
                   I craft intuitive and visually appealing user experiences with a strong focus on usability, accessibility, and modern design principles. From wireframes to polished prototypes...
                 </div>
               </div>
@@ -175,10 +175,10 @@ export const AboutSection = () => {
                 +
               </div>
               <div className="flex-1 min-w-0">
-                <div className="font-bebas text-base sm:text-lg text-white tracking-wide leading-tight group-hover:text-cyan-300 transition-colors">
+                <div className="font-bebas text-base sm:text-lg lg:text-2xl text-white tracking-wide leading-tight group-hover:text-cyan-300 transition-colors">
                   FULL-STACK DEVELOPMENT
                 </div>
-                <div className="text-[11px] sm:text-xs text-slate-300 font-sans font-light line-clamp-2 mt-0.5">
+                <div className="text-[11px] sm:text-xs lg:text-base text-slate-300 font-sans font-light line-clamp-2 mt-0.5">
                   I build responsive, scalable, and interactive web applications with a focus on clean code, performance, and seamless user experience (MERN Stack)...
                 </div>
               </div>

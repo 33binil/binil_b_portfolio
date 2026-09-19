@@ -38,7 +38,7 @@ export const ServicesSection = () => {
               <div className="flex items-center justify-between border-b border-white/10 pb-3 font-mono-code">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"/>
-                  <span className="text-[11px] sm:text-xs font-bold text-emerald-400 tracking-widest uppercase">
+                  <span className="text-[11px] sm:text-xs lg:text-base font-bold text-emerald-400 tracking-widest uppercase">
                     CONTRACT SCOPE // {selectedService.title}
                   </span>
                 </div>
@@ -48,10 +48,10 @@ export const ServicesSection = () => {
               </div>
 
               <div>
-                <h3 className="font-bebas text-xl sm:text-2xl text-white tracking-wide">
+                <h3 className="font-bebas text-xl sm:text-2xl lg:text-4xl text-white tracking-wide">
                   {selectedService.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300 font-light mt-2 leading-relaxed">
+                <p className="text-xs sm:text-sm lg:text-lg text-slate-300 font-light mt-2 leading-relaxed">
                   {selectedService.scope}
                 </p>
               </div>
@@ -81,10 +81,10 @@ export const ServicesSection = () => {
             </div>
 
             <div className="flex-1 min-w-0 font-mono-code">
-              <div className="font-bebas text-base sm:text-lg text-white tracking-wide leading-tight group-hover:text-emerald-300 transition-colors">
+              <div className="font-bebas text-base sm:text-lg lg:text-2xl text-white tracking-wide leading-tight group-hover:text-emerald-300 transition-colors">
                 {item.title}
               </div>
-              <div className="text-[11px] sm:text-xs text-slate-300 font-sans font-light truncate mt-0.5">
+              <div className="text-[11px] sm:text-xs lg:text-base text-slate-300 font-sans font-light truncate mt-0.5">
                 {item.shortDesc}
               </div>
             </div>
@@ -92,7 +92,7 @@ export const ServicesSection = () => {
 
         {/* Action Button: COMMISSION A BUILD ▸ */}
         <div className="pt-1.5">
-          <button onClick={handleCommissionClick} onMouseEnter={playUiHover} className="group px-4 py-2 rounded-md bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-500 hover:brightness-110 text-black font-bebas text-base sm:text-lg tracking-wider uppercase flex items-center gap-2 border border-emerald-300 shadow-[0_0_20px_rgba(50,243,141,0.4)] transition-all duration-150 cursor-pointer active:scale-95">
+          <button onClick={handleCommissionClick} onMouseEnter={playUiHover} className="group px-4 py-2 rounded-md bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-500 hover:brightness-110 text-black font-bebas text-base sm:text-lg lg:text-2xl tracking-wider uppercase flex items-center gap-2 border border-emerald-300 shadow-[0_0_20px_rgba(50,243,141,0.4)] transition-all duration-150 cursor-pointer active:scale-95">
             <span>COMMISSION A BUILD</span>
             <span className="text-sm group-hover:translate-x-1 transition-transform">▸</span>
           </button>
