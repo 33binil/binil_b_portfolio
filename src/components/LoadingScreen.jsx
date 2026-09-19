@@ -63,9 +63,16 @@ export const LoadingScreen = ({ onComplete, redirectPath = '/' }) => {
   const [autoEnterCountdown, setAutoEnterCountdown] = useState(2);
   const hasFinishedRef = useRef(false);
 
-  // Sync mute state on mount
+  // Sync mute state on mount & listen to changes
   useEffect(() => {
     setIsMuted(getIsAudioMuted());
+    const handleMuteChange = (e) => {
+      if (e.detail && typeof e.detail.isMuted === 'boolean') {
+        setIsMuted(e.detail.isMuted);
+      }
+    };
+    window.addEventListener('portfolio-audio-mute-change', handleMuteChange);
+    return () => window.removeEventListener('portfolio-audio-mute-change', handleMuteChange);
   }, []);
 
   // Slide rotation every 3.8s

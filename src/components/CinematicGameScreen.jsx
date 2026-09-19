@@ -9,6 +9,13 @@ export const CinematicGameScreen = ({ backgroundImage, superTitle, title, script
     const [countdownSeconds, setCountdownSeconds] = useState(24);
     useEffect(() => {
         setIsMuted(getIsAudioMuted());
+        const handleMuteChange = (e) => {
+            if (e.detail && typeof e.detail.isMuted === 'boolean') {
+                setIsMuted(e.detail.isMuted);
+            }
+        };
+        window.addEventListener('portfolio-audio-mute-change', handleMuteChange);
+        return () => window.removeEventListener('portfolio-audio-mute-change', handleMuteChange);
     }, []);
     useEffect(() => {
         const updateTime = () => {

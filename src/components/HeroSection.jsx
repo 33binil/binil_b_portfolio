@@ -29,9 +29,17 @@ export const HeroSection = () => {
             menuContainerRef.current.scrollTop = 0;
         }
     }, []);
+
     // Synchronize audio state
     useEffect(() => {
         setIsMuted(getIsAudioMuted());
+        const handleMuteChange = (e) => {
+            if (e.detail && typeof e.detail.isMuted === 'boolean') {
+                setIsMuted(e.detail.isMuted);
+            }
+        };
+        window.addEventListener('portfolio-audio-mute-change', handleMuteChange);
+        return () => window.removeEventListener('portfolio-audio-mute-change', handleMuteChange);
     }, []);
     // Live in-game clock and countdown timer
     useEffect(() => {

@@ -19,6 +19,15 @@ export function toggleAudioMute() {
     isAudioMuted = !isAudioMuted;
     if (typeof window !== 'undefined') {
         localStorage.setItem('binil_portfolio_muted', isAudioMuted ? 'true' : 'false');
+        window.dispatchEvent(new CustomEvent('portfolio-audio-mute-change', { detail: { isMuted: isAudioMuted } }));
+    }
+    return isAudioMuted;
+}
+export function setAudioMuted(muted) {
+    isAudioMuted = !!muted;
+    if (typeof window !== 'undefined') {
+        localStorage.setItem('binil_portfolio_muted', isAudioMuted ? 'true' : 'false');
+        window.dispatchEvent(new CustomEvent('portfolio-audio-mute-change', { detail: { isMuted: isAudioMuted } }));
     }
     return isAudioMuted;
 }
