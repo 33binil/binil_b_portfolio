@@ -79,26 +79,7 @@ export function AudioWarningPrompt({ onSelectChoice }) {
 
         {/* Description */}
         <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 font-sans">
-          This interactive portfolio is equipped with an authentic GTA-style background soundtrack:
-        </p>
-
-        {/* Track Info Box */}
-        <div className="rounded-xl bg-black/60 border border-white/10 p-3 flex items-center gap-3.5 mb-5">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#ff2a85] via-purple-600 to-cyan-400 flex items-center justify-center text-white shrink-0 shadow-[0_0_15px_rgba(255,42,133,0.4)]">
-            <Radio className="w-5 h-5" />
-          </div>
-          <div className="overflow-hidden">
-            <div className="text-xs sm:text-sm font-bold text-white truncate tracking-wide">
-              Aswin Ram — To The Road (feat. ABY)
-            </div>
-            <div className="text-[10px] sm:text-[11px] font-bold text-cyan-400 tracking-wider mt-0.5">
-              SELECTED PORTFOLIO SOUNDTRACK • 98.3 FM
-            </div>
-          </div>
-        </div>
-
-        {/* Choice Prompt Text */}
-        <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5 font-sans">
+          This interactive portfolio is equipped with an authentic GTA-style background soundtrack,
           Please choose whether to enable the soundtrack before loading the main game terminal:
         </p>
 
