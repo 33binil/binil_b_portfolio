@@ -13,6 +13,8 @@ import { EducationSection } from './components/EducationSection';
 import { ServicesSection } from './components/ServicesSection';
 import { ContactSection } from './components/ContactSection';
 import { MissionCompleteSection } from './components/MissionCompleteSection';
+import { PrivacyPolicySection } from './components/PrivacyPolicySection';
+import { TermsOfServiceSection } from './components/TermsOfServiceSection';
 import { setAudioMuted } from './utils/audio';
 
 function AppContent() {
@@ -85,6 +87,8 @@ function AppContent() {
           <Route path="/services" element={<ServicesSection />} />
           <Route path="/contact" element={<ContactSection />} />
           <Route path="/exit" element={<MissionCompleteSection />} />
+          <Route path="/privacy" element={<PrivacyPolicySection />} />
+          <Route path="/terms" element={<TermsOfServiceSection />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

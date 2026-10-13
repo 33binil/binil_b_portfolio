@@ -429,6 +429,22 @@ export const GameScreenLayout = ({ activeMenuId, scriptSubtitle, missionCode, mi
               <button onClick={() => setShowExitModal(false)} className="w-full py-2.5 px-4 rounded-lg bg-transparent hover:bg-white/5 text-slate-400 hover:text-white font-mono-code text-xs tracking-wider transition-colors cursor-pointer">
                 RESUME CURRENT MISSION
               </button>
+
+              <div className="flex items-center justify-center gap-3 pt-2 border-t border-white/10 text-[10px] font-mono-code text-slate-400">
+                <button
+                  onClick={() => { playUiClick(); setShowExitModal(false); navigate('/privacy'); }}
+                  className="hover:text-cyan-300 transition-colors cursor-pointer"
+                >
+                  PRIVACY POLICY
+                </button>
+                <span>•</span>
+                <button
+                  onClick={() => { playUiClick(); setShowExitModal(false); navigate('/terms'); }}
+                  className="hover:text-pink-300 transition-colors cursor-pointer"
+                >
+                  TERMS OF SERVICE
+                </button>
+              </div>
             </div>
           </div>
         </div>)}

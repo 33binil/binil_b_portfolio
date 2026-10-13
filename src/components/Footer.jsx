@@ -133,8 +133,24 @@ export const Footer = () => {
             <span className="text-emerald-400">SYSTEM STATUS: ALL SECTORS OPERATIONAL</span>
           </div>
 
-          <div>
-            © {new Date().getFullYear()} BINIL B. ALL MISSIONS ARCHIVED.
+          <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
+            <button
+              onClick={() => handleNavigate('/privacy')}
+              onMouseEnter={playUiHover}
+              className="hover:text-cyan-300 transition-colors cursor-pointer"
+            >
+              PRIVACY POLICY
+            </button>
+            <span className="text-slate-700">•</span>
+            <button
+              onClick={() => handleNavigate('/terms')}
+              onMouseEnter={playUiHover}
+              className="hover:text-pink-300 transition-colors cursor-pointer"
+            >
+              TERMS OF SERVICE
+            </button>
+            <span className="text-slate-700">•</span>
+            <span>© {new Date().getFullYear()} BINIL B. ALL MISSIONS ARCHIVED.</span>
           </div>
         </div>
       </div>
